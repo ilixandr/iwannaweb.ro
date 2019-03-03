@@ -206,7 +206,7 @@ body {
 	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 13px;
 	line-height: 1.5em; 
-	background-color: #eeeff3; background-repeat: repeat-x; background-position: top
+	background-color: #D9D9D9; /* was #eeeff3 */
 }
 
 #main { 
