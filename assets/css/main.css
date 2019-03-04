@@ -92,7 +92,7 @@ li.activ {
 	color: #000000;
 	padding: 20px 20px;
 }
-.navbar-inverse .navbar-nav > li > a:hover {
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
 	color: #0630FF;
 	padding: 20px 20px;
 }
