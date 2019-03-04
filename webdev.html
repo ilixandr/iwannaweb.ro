@@ -1,3 +1,15 @@
+<?php
+/*======================================
+  == ionut @ 04-Mar-2019              ==
+  ======================================*/
+  global $language;
+  $language = isset($_GET["lang"]) ? ($_GET["lang"] == "en" ? "en" : ($_GET["lang"] == "fr" ? "fr" : "ro")) : "ro";
+  require_once(dirname(__FILE__) . '/assets/phpres/strings.' . $language . '.php');
+  $pagename = basename(__FILE__, ".php");
+  $pagetitle = $txt[$pagename . "_title"];
+  $pagekeywords = "\"" . $txt[$pagename . "_keywords"] . "\"";
+  $pagedescription = "\"" . $txt[$pagename . "_description"] . "\"";
+?>
 <!DOCTYPE html>
 <html lang="ro">
   <head>

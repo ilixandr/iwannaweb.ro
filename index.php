@@ -5,13 +5,14 @@
   global $language;
   $language = isset($_GET["lang"]) ? ($_GET["lang"] == "en" ? "en" : ($_GET["lang"] == "fr" ? "fr" : "ro")) : "ro";
   require_once(dirname(__FILE__) . '/assets/phpres/strings.' . $language . '.php');
+  require_once(dirname(__FILE__) . '/assets/phpres/elements.php');
   $pagename = basename(__FILE__, ".php");
   $pagetitle = $txt[$pagename . "_title"];
   $pagekeywords = "\"" . $txt[$pagename . "_keywords"] . "\"";
   $pagedescription = "\"" . $txt[$pagename . "_description"] . "\"";
 ?>
 <!DOCTYPE html>
-<html lang=<?php echo $language?>>
+<html lang=<?php echo "\"" . $language . "\""?>>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,88 +31,9 @@
     <![endif]-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   	<link rel="stylesheet" href="assets/css/main.css" type="text/css">
-    
-    
   </head>
   <body>
-    <nav class="navbar navbar-inverse">
-      <div class="topmenu">
-        <div class="left-topmenu">
-          <a class="topmenu-a" href="https://facebook.com" target="_blank">
-            <i class="fab fa-iww fa-facebook-f"></i>
-          </a>
-          <a class="topmenu-a" href="https://twitter.com" target="_blank">
-            <i class="fab fa-iww fa-twitter"></i>
-          </a>
-          <a class="topmenu-a" href="https://github.com" target="_blank">
-            <i class="fab fa-iww fa-github"></i>
-          </a>
-        </div>
-        <div class="right-topmenu">
-          <ul class="nav navbar-nav navbar-nav-fit">
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="">
-                <?php echo $txt["lang"]?>
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href=<?php echo "index.php?lang=" . substr($txt["lang_flag_1"], 0, 2)?>><img class="img-flag" src=<?php echo "\"assets/img/" . $txt["lang_flag_1"] . ".svg\""?>><?php echo $txt["lang_alt_1"]?></a>
-                </li>
-                <li>
-                  <a href=<?php echo "index.php?lang=" . substr($txt["lang_flag_2"], 0, 2)?>><img class="img-flag" src=<?php echo "\"assets/img/" . $txt["lang_flag_2"] . ".svg\""?>><?php echo $txt["lang_alt_2"]?></a>
-                </li> 
-              </ul>
-            </li> 
-          </ul>
-          <form class="navbar-form navbar-right col-md-6 col-xs-6" action="/action_page.php">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder=<?php echo $txt["search"]?>>
-              <div class="input-group-btn">
-                <button class="btn btn-default" type="submit">
-                  <i class="glyphicon glyphicon-search"></i>
-                </button>
-              </div>  
-            </div>
-          </form>
-        </div>
-      </div>
-  	  <div class="container-fluid container-fluid-white">
-        <div class="navbar-header">           
-      	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-        	  <span class="icon-bar"></span>
-        	  <span class="icon-bar"></span>                        
-      	  </button>
-      	  <a class="navbar-brand navbar-brand-fit" href="index.html"><img class="logo" src="assets/img/logo.png" alt=""/></a>
-    	  </div>
-    	  <div id="sticky-header">
-    	    <div class="collapse navbar-collapse" id="myNavbar">
-      	    <ul class="nav navbar-nav">
-              <li class="activ"><a href="http://www.iwannaweb.ro"><?php echo $txt["home"]?></a></li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="webdev.html"><?php echo $txt["webdev"]?><span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#"><?php echo $txt["services"]?></a></li>
-                  <li><a href="#"><?php echo $txt["pricing"]?></a></li>
-                  <li><a href="#"><?php echo $txt["software"]?></a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="http://www.iwannaweb.ro/portofoliu_page3.html"><?php echo $txt["portfolio"]?><span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#"><?php echo $txt["recent"]?></a></li>
-                  <li><a href="#"><?php echo $txt["archive"]?></a></li>
-                </ul>
-              </li>
-              <li><a href="http://www.iwannaweb.ro/crypto/"><?php echo $txt["crypto"]?></a></li>
-              <li><a href="http://www.iwannaweb.ro/blog/"><?php echo $txt["blog"]?></a></li>
-              <li><a href="http://www.iwannaweb.ro/contact.asp"><?php echo $txt["contact"]?></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <?php addMenuHtml($language)?>
     <div class="container">
       <div class="col-sm-8">
         <h1>&nbsp;&nbsp;&nbsp;<a href="http://www.iwannaweb.ro">Cluj web design</a><br /> <span>web designer &amp; promovare site</span></h1>
@@ -226,50 +148,7 @@
       </div>
     </div>
     <div class="cleaner h20"></div>
-    <footer id="iwwFooter">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-3">
-            <h2 class="logo"><a href="http://www.iwannaweb.ro"><img src="assets/img/logo.png" alt=""/></a></h2>
-          </div>
-          <div class="col-sm-2">
-            <h5>Dezvoltare web</h5>
-            <ul>
-              <li><a href="#"><i class="fa fa-info special"></i> Noutăţi</a></li>
-              <li><a href="#"><i class="fa fa-server special"></i> Software gratuit</a></li>
-              <li><a href="#"><i class="fa fa-question-circle special"></i> Solicită ajutor</a></li>
-            </ul>
-          </div>
-          <div class="col-sm-2">
-            <h5>Cryptomonede</h5>
-            <ul>
-              <li><a href="#"><i class="fa fa-lightbulb-o special"></i> Informaţii</a></li>
-              <li><a href="#"><i class="fa fa-bar-chart special"></i> Trenduri</a></li>
-              <li><a href="#"><i class="fa fa-twitter special"></i> @iwannaCrypto</a></li>
-            </ul>
-          </div>
-          <div class="col-sm-2">
-            <h5>Social</h5>
-            <ul>
-              <li><a href="http://www.iwannaweb.ro/blog/"><i class="fa fa-pencil-square special"></i> Blog</a></li>
-              <li><a href="#"><i class="fa fa-bullhorn special"></i> Recomandări</a></li>
-              <li><a href="#"><i class="fa fa-paper-plane special"></i> Telegram</a></li>
-            </ul>
-          </div>
-          <div class="col-sm-3">
-            <div class="social-networks">
-              <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
-              <a href="#" class="google"><i class="fab fa-github"></i></a>
-            </div>
-            <a href="http://www.iwannaweb.ro/contact.asp" class="btn btn-default">Contactează-ne</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <p>© 2013-<?php echo date("Y");?> <a href="http://www.iwannaweb.ro">iwannaweb</a> | Experience web freedom </p>
-      </div>
-    </footer>
+    <?php addFooterHtml($language)?>
     <script type="text/javascript">
   	  (() => {
         let po = document.createElement("script"); 
