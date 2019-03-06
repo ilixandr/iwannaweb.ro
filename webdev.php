@@ -5,6 +5,7 @@
   global $language;
   $language = isset($_GET["lang"]) ? ($_GET["lang"] == "en" ? "en" : ($_GET["lang"] == "fr" ? "fr" : "ro")) : "ro";
   require_once(dirname(__FILE__) . '/assets/phpres/strings.' . $language . '.php');
+  require_once(dirname(__FILE__) . '/assets/phpres/elements.php');
   $pagename = basename(__FILE__, ".php");
   $pagetitle = $txt[$pagename . "_title"];
   $pagekeywords = "\"" . $txt[$pagename . "_keywords"] . "\"";
@@ -32,84 +33,7 @@
   	<link rel="stylesheet" href="assets/css/main.css" type="text/css">
   </head>
 <body>
-    <nav class="navbar navbar-inverse">
-    <div class="topmenu">
-        <div class="left-topmenu">
-          <a class="topmenu-a" href="https://facebook.com" target="_blank">
-            <i class="fab fa-iww fa-facebook-f"></i>
-          </a>
-          <a class="topmenu-a" href="https://twitter.com" target="_blank">
-            <i class="fab fa-iww fa-twitter"></i>
-          </a>
-          <a class="topmenu-a" href="https://github.com" target="_blank">
-            <i class="fab fa-iww fa-github"></i>
-          </a>
-        </div>
-        <div class="right-topmenu">
-          <ul class="nav navbar-nav navbar-nav-fit">
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="">
-                <?php echo $txt["lang"]?>
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href=<?php echo "index.php?lang=" . substr($txt["lang_flag_1"], 0, 2)?>><img class="img-flag" src=<?php echo "\"assets/img/" . $txt["lang_flag_1"] . ".svg\""?>><?php echo $txt["lang_alt_1"]?></a>
-                </li>
-                <li>
-                  <a href=<?php echo "index.php?lang=" . substr($txt["lang_flag_2"], 0, 2)?>><img class="img-flag" src=<?php echo "\"assets/img/" . $txt["lang_flag_2"] . ".svg\""?>><?php echo $txt["lang_alt_2"]?></a>
-                </li> 
-              </ul>
-            </li> 
-          </ul>
-          <form class="navbar-form navbar-right col-md-6 col-xs-6" action="/action_page.php">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder=<?php echo $txt["search"]?>>
-              <div class="input-group-btn">
-                <button class="btn btn-default" type="submit">
-                  <i class="glyphicon glyphicon-search"></i>
-                </button>
-              </div>  
-            </div>
-          </form>
-        </div>
-      </div>
-  	  <div class="container-fluid container-fluid-white">
-        <div class="navbar-header">           
-      	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-        	  <span class="icon-bar"></span>
-        	  <span class="icon-bar"></span>                        
-      	  </button>
-      	  <a class="navbar-brand navbar-brand-fit" href="index.html"><img class="logo" src="assets/img/logo.png" alt=""/></a>
-    	  </div>
-    	  <div id="sticky-header">
-    	    <div class="collapse navbar-collapse" id="myNavbar">
-      	    <ul class="nav navbar-nav">
-              <li class="activ"><a href="http://www.iwannaweb.ro"><?php echo $txt["home"]?></a></li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href=""><?php echo $txt["webdev"]?><span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#"><?php echo $txt["services"]?></a></li>
-                  <li><a href="#"><?php echo $txt["pricing"]?></a></li>
-                  <li><a href="#"><?php echo $txt["software"]?></a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="http://www.iwannaweb.ro/portofoliu_page3.html"><?php echo $txt["portfolio"]?><span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#"><?php echo $txt["recent"]?></a></li>
-                  <li><a href="#"><?php echo $txt["archive"]?></a></li>
-                </ul>
-              </li>
-              <li><a href="http://www.iwannaweb.ro/crypto/"><?php echo $txt["crypto"]?></a></li>
-              <li><a href="http://www.iwannaweb.ro/blog/"><?php echo $txt["blog"]?></a></li>
-              <li><a href="http://www.iwannaweb.ro/contact.asp"><?php echo $txt["contact"]?></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
+  <?php addMenuHtml($language, "webdev")?>
     <div class="container">
       <div class="col-sm-9">
       	<h1>HelpDesk &amp; asistenţă IT</h1>

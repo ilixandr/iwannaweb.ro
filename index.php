@@ -33,7 +33,7 @@
   	<link rel="stylesheet" href="assets/css/main.css" type="text/css">
   </head>
   <body>
-    <?php addMenuHtml($language)?>
+    <?php addMenuHtml($language, "index")?>
     <div class="container">
       <div class="col-sm-8">
         <h1>&nbsp;&nbsp;&nbsp;<a href="http://www.iwannaweb.ro">Cluj web design</a><br /> <span>web designer &amp; promovare site</span></h1>

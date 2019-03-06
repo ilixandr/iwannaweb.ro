@@ -46,8 +46,34 @@ function addFooterHtml($language) {
   </div>
 </footer>';
 }
-function addMenuHtml($language) {
+function addMenuHtml($language, $pagename) {
   require(dirname(__FILE__) . '/strings.' . $language . '.php');
+  $indexIsActive = "";
+  $webdevIsActive = "";
+  $portfolioIsActive = "";
+  $blogIsActive = "";
+  $cryptoIsActive = "";
+  $contactIsActive = "";
+  switch ($pagename) {
+    case "index":
+      $indexIsActive = " class=\"activ\"";
+      break;
+    case "webdev":
+      $webdevIsActive = " activ";
+      break;
+    case "portfolio":
+      $portfolioIsActive = " activ";
+      break;
+    case "blog":
+      $blogIsActive = " class=\"activ\"";
+      break;
+    case "crypto":
+      $cryptoIsActive = " class=\"activ\"";
+      break;
+    case "contact":
+      $contactIsActive = " class=\"activ\"";
+      break;
+  }
   echo '<nav class="navbar navbar-inverse">
   <div class="topmenu">
     <div class="left-topmenu">
@@ -102,25 +128,25 @@ function addMenuHtml($language) {
     <div id="sticky-header">
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li class="activ"><a href="http://www.iwannaweb.ro">', $txt["home"], '</a></li>
-          <li class="dropdown">
+          <li', $indexIsActive,'><a href="http://www.iwannaweb.ro">', $txt["home"], '</a></li>
+          <li class="dropdown ', $webdevIsActive,'">
             <a class="dropdown-toggle" data-toggle="dropdown" href="">', $txt["webdev"],'<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">', $txt["services"], '</a></li>
+              <li><a href="webdev.php">', $txt["services"], '</a></li>
               <li><a href="#">', $txt["pricing"], '</a></li>
               <li><a href="#">', $txt["software"], '</a></li>
             </ul>
           </li>
-          <li class="dropdown">
+          <li class="dropdown"', $portfolioIsActive,'>
             <a class="dropdown-toggle" data-toggle="dropdown" href="http://www.iwannaweb.ro/portofoliu_page3.html">', $txt["portfolio"], '<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">', $txt["recent"], '</a></li>
               <li><a href="#">', $txt["archive"], '</a></li>
             </ul>
           </li>
-          <li><a href="http://www.iwannaweb.ro/crypto/">', $txt["crypto"], '</a></li>
-          <li><a href="http://www.iwannaweb.ro/blog/">', $txt["blog"], '</a></li>
-          <li><a href="http://www.iwannaweb.ro/contact.asp">', $txt["contact"], '</a></li>
+          <li', $cryptoIsActive,'><a href="http://www.iwannaweb.ro/crypto/">', $txt["crypto"], '</a></li>
+          <li', $blogIsActive, '><a href="http://www.iwannaweb.ro/blog/">', $txt["blog"], '</a></li>
+          <li', $contactIsActive, '><a href="http://www.iwannaweb.ro/contact.asp">', $txt["contact"], '</a></li>
         </ul>
       </div>
     </div>
