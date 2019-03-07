@@ -13,25 +13,7 @@
 ?>
 <!DOCTYPE html>
 <html lang=<?php echo "\"" . $language . "\""?>>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo $pagetitle ?></title>
-  	<meta name="keywords" content=<?php echo $pagekeywords ?> />
-  	<meta name="description" content=<?php echo $pagedescription ?> />
-  	<meta name="alexaVerifyID" content="v29ZnO1qm4DkMR-EiIIz_aOrQ00" />
-  	<link href="assets/img/favicon.png" rel="icon" type="image/png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  	<link rel="stylesheet" href="assets/css/main.css" type="text/css">
-  </head>
+  <?php addHeadHtml($language, $pagetitle, $pagekeywords, $pagedescription)?>
   <body>
     <?php addMenuHtml($language, "index")?>
     <div class="container">

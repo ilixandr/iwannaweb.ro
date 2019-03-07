@@ -4,8 +4,8 @@
   ======================================*/
   global $language;
   $language = isset($_GET["lang"]) ? ($_GET["lang"] == "en" ? "en" : ($_GET["lang"] == "fr" ? "fr" : "ro")) : "ro";
-  require_once(dirname(__FILE__) . '/assets/phpres/strings.' . $language . '.php');
-  require_once(dirname(__FILE__) . '/assets/phpres/elements.php');
+  require_once(dirname(dirname(__FILE__)) . '/assets/phpres/strings.' . $language . '.php');
+  require_once(dirname(dirname(__FILE__)) . '/assets/phpres/elements.php');
   $pagename = basename(__FILE__, ".php");
   $pagetitle = $txt[$pagename . "_title"];
   $pagekeywords = "\"" . $txt[$pagename . "_keywords"] . "\"";
@@ -15,13 +15,12 @@
 <html lang=<?php echo $language?>>
 <?php addHeadHtml($language, $pagetitle, $pagekeywords, $pagedescription)?>
 <body>
-  <?php addMenuHtml($language, "webdev")?>
+  <?php addMenuHtml($language, "crypto")?>
     <div class="container">
       <div class="col-sm-9">
       	<h1>HelpDesk &amp; asistenţă IT</h1>
         <div class="image_frame_300 image_fl"><span></span><img src="assets/img/webdesign_helpdesk.png" alt= "servicii helpdesk, asistententa IT, Cluj web designer" /></div>
-        <p><em>Pentru că ne dorim să avem clienţii cei mai mulţumiţi, oferim si servicii HelpDesk, cu program deschis între orele 8:30 AM şi 18:30 PM. Aveţi o problemă care 
-		necesită asistenţă IT? Noi o vom rezolva! </em></p>
+        <p><em>Something about crypto</em></p>
         <p>În anii '90 se spunea tot mai des că trăim în "secolul vitezei". Şi, într-adevăr, la vremea respectivă, aspectul care devenea hotărâtor în ceea ce avea pretenţia 
 		să se numească economie de piaţă era raportul calitate/ preţ/ viteză de execuţie. Astăzi ne vedem, cu sau fără voia noastră, migraţi spre o societate de tip informaţional, 
 		în care publicitatea a devenit un factor chiar mai important decât calitatea, întrucât dacă nimeni nu ştie ce şi unde vinzi, va trebui să te raportezi la societatea 
