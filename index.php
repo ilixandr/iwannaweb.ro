@@ -130,7 +130,7 @@
       </div>
     </div>
     <div class="cleaner h20"></div>
-    <?php addFooterHtml($language)?>
+    <?php addFooterHtml($language, "index")?>
     <script type="text/javascript">
   	  (() => {
         let po = document.createElement("script"); 

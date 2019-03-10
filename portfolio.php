@@ -79,6 +79,6 @@
         <div class="cleaner"></div>
     </div>
 </div>
-  <?php addFooterHtml($language)?>
+  <?php addFooterHtml($language, "portfolio")?>
 </body>
 </html>

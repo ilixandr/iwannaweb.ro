@@ -94,7 +94,7 @@
       </div>
     </div>
     <div class="cleaner h20"></div>
-    <?php addFooterHtml($language)?>
+    <?php addFooterHtml($language, "webdev")?>
     <script type="text/javascript">
   	  (function() {
         var po = document.createElement("script"); po.type = "text/javascript"; po.async = true;

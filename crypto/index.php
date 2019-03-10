@@ -19,7 +19,7 @@
     <div class="container">
       <div class="col-sm-9">
       	<h1>HelpDesk &amp; asistenţă IT</h1>
-        <div class="image_frame_300 image_fl"><span></span><img src="assets/img/webdesign_helpdesk.png" alt= "servicii helpdesk, asistententa IT, Cluj web designer" /></div>
+        <div class="image_frame_300 image_fl"><span></span><img src="../assets/img/webdesign_helpdesk.png" alt= "servicii helpdesk, asistententa IT, Cluj web designer" /></div>
         <p><em>Something about crypto</em></p>
         <p>În anii '90 se spunea tot mai des că trăim în "secolul vitezei". Şi, într-adevăr, la vremea respectivă, aspectul care devenea hotărâtor în ceea ce avea pretenţia 
 		să se numească economie de piaţă era raportul calitate/ preţ/ viteză de execuţie. Astăzi ne vedem, cu sau fără voia noastră, migraţi spre o societate de tip informaţional, 
@@ -93,7 +93,7 @@
       </div>
     </div>
     <div class="cleaner h20"></div>
-    <?php addFooterHtml($language)?>
+    <?php addFooterHtml($language, "crypto")?>
     <script type="text/javascript">
   	  (function() {
         var po = document.createElement("script"); po.type = "text/javascript"; po.async = true;

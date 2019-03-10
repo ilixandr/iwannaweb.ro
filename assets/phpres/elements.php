@@ -1,11 +1,11 @@
 <?php
-function addFooterHtml($language) {
+function addFooterHtml($language, $pagename) {
   require(dirname(__FILE__) . '/strings.' . $language . '.php');
   echo '<footer id="iwwFooter">
   <div class="container">
     <div class="row">
       <div class="col-sm-3">
-        <h2 class="logo"><a href="http://www.iwannaweb.ro"><img src="assets/img/logo.png" alt=""/></a></h2>
+        <h2 class="logo"><a href="http://www.iwannaweb.ro"><img src="', $pagename == "crypto" ? "../" : "", 'assets/img/logo.png" alt=""/></a></h2>
       </div>
       <div class="col-sm-2">
         <h5>Dezvoltare web</h5>
@@ -96,10 +96,10 @@ function addMenuHtml($language, $pagename) {
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a href="index.php?lang=', substr($txt["lang_flag_1"], 0, 2), '"><img class="img-flag" src="assets/img/', $txt["lang_flag_1"], '.svg">', $txt["lang_alt_1"], '</a>
+              <a href="index.php?lang=', substr($txt["lang_flag_1"], 0, 2), '"><img class="img-flag" src="', $pagename == "crypto" ? "../" : "",'assets/img/', $txt["lang_flag_1"], '.svg">', $txt["lang_alt_1"], '</a>
             </li>
             <li>
-              <a href="index.php?lang=', substr($txt["lang_flag_2"], 0, 2), '"><img class="img-flag" src="assets/img/', $txt["lang_flag_2"], '.svg">', $txt["lang_alt_2"], '</a>
+              <a href="index.php?lang=', substr($txt["lang_flag_2"], 0, 2), '"><img class="img-flag" src="', $pagename =="crypto" ? "../" : "", 'assets/img/', $txt["lang_flag_2"], '.svg">', $txt["lang_alt_2"], '</a>
             </li> 
           </ul>
         </li> 
@@ -123,7 +123,7 @@ function addMenuHtml($language, $pagename) {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand navbar-brand-fit" href="index.html"><img class="logo" src="assets/img/logo.png" alt=""/></a>
+      <a class="navbar-brand navbar-brand-fit" href="index.html"><img class="logo" src="', $pagename == "crypto" ? "../" : "", 'assets/img/logo.png" alt=""/></a>
     </div>
     <div id="sticky-header">
       <div class="collapse navbar-collapse" id="myNavbar">
@@ -144,7 +144,7 @@ function addMenuHtml($language, $pagename) {
               <li><a href="#">', $txt["archive"], '</a></li>
             </ul>
           </li>
-          <li', $cryptoIsActive,'><a href="http://www.iwannaweb.ro/crypto/">', $txt["crypto"], '</a></li>
+          <li', $cryptoIsActive,'><a href="crypto/index.php">', $txt["crypto"], '</a></li>
           <li', $blogIsActive, '><a href="http://www.iwannaweb.ro/blog/">', $txt["blog"], '</a></li>
           <li', $contactIsActive, '><a href="http://www.iwannaweb.ro/contact.asp">', $txt["contact"], '</a></li>
         </ul>
