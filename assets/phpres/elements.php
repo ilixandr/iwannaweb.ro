@@ -146,7 +146,7 @@ function addMenuHtml($language, $pagename) {
           </li>
           <li', $cryptoIsActive,'><a href="crypto/index.php">', $txt["crypto"], '</a></li>
           <li', $blogIsActive, '><a href="http://www.iwannaweb.ro/blog/">', $txt["blog"], '</a></li>
-          <li', $contactIsActive, '><a href="http://www.iwannaweb.ro/contact.asp">', $txt["contact"], '</a></li>
+          <li', $contactIsActive, '><a href="contact.php">', $txt["contact"], '</a></li>
         </ul>
       </div>
     </div>
