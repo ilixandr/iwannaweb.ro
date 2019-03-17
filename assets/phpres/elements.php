@@ -92,7 +92,7 @@ function addMenuHtml($language, $pagename) {
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="">', 
             $txt["lang"], 
-            '<span class="caret"></span>
+            '<img class="img-flag" src="', $pagename == "crypto" ? "../" : "", 'assets/img/', $txt["lang_flag_0"], '.svg" alt=""><span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
             <li>

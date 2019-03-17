@@ -21,6 +21,7 @@ $txt["portfolio_description"] = "say somethin'";
 $txt["lang"] = "Language";
 $txt["lang_alt_1"] = "Română";
 $txt["lang_alt_2"] = "Français";
+$txt["lang_flag_0"] = "en-us";
 $txt["lang_flag_1"] = "ro-ro";
 $txt["lang_flag_2"] = "fr-fr";
 $txt["home"] = "HOME";
