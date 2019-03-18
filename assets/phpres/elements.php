@@ -96,10 +96,10 @@ function addMenuHtml($language, $pagename) {
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a href="index.php?lang=', substr($txt["lang_flag_1"], 0, 2), '"><img class="img-flag" src="', $pagename == "crypto" ? "../" : "",'assets/img/', $txt["lang_flag_1"], '.svg">', $txt["lang_alt_1"], '</a>
+              <a href="', $pagename, '.php?lang=', substr($txt["lang_flag_1"], 0, 2), '"><img class="img-flag" src="', $pagename == "crypto" ? "../" : "",'assets/img/', $txt["lang_flag_1"], '.svg">', $txt["lang_alt_1"], '</a>
             </li>
             <li>
-              <a href="index.php?lang=', substr($txt["lang_flag_2"], 0, 2), '"><img class="img-flag" src="', $pagename =="crypto" ? "../" : "", 'assets/img/', $txt["lang_flag_2"], '.svg">', $txt["lang_alt_2"], '</a>
+              <a href="', $pagename, '.php?lang=', substr($txt["lang_flag_2"], 0, 2), '"><img class="img-flag" src="', $pagename =="crypto" ? "../" : "", 'assets/img/', $txt["lang_flag_2"], '.svg">', $txt["lang_alt_2"], '</a>
             </li> 
           </ul>
         </li> 
