@@ -8,27 +8,27 @@ function addFooterHtml($language, $pagename) {
         <h2 class="logo"><a href="http://www.iwannaweb.ro"><img src="', $pagename == "crypto" ? "../" : "", 'assets/img/logo.png" alt=""/></a></h2>
       </div>
       <div class="col-sm-2">
-        <h5>Dezvoltare web</h5>
+        <h5>', $txt["f_webdev_small"], '</h5>
         <ul>
-          <li><a href="#"><i class="fa fa-info special"></i> Noutăţi</a></li>
-          <li><a href="#"><i class="fa fa-server special"></i> Software gratuit</a></li>
-          <li><a href="#"><i class="fa fa-question-circle special"></i> Solicită ajutor</a></li>
+          <li><a href="#"><i class="fa fa-info special"></i>', $txt["f_news"], '</a></li>
+          <li><a href="#"><i class="fa fa-server special"></i> ', $txt["f_free_soft"], '</a></li>
+          <li><a href="#"><i class="fa fa-question-circle special"></i> ', $txt["f_ask_help"], '</a></li>
         </ul>
       </div>
       <div class="col-sm-2">
-        <h5>Cryptomonede</h5>
+        <h5>', $txt["f_crypto_small"], '</h5>
         <ul>
-          <li><a href="#"><i class="far fa-lightbulb special"></i> Informaţii</a></li>
-          <li><a href="#"><i class="far fa-chart-bar special"></i> Trenduri</a></li>
-          <li><a href="#"><i class="fab fa-twitter special"></i> @iwannaCrypto</a></li>
+          <li><a href="#"><i class="far fa-lightbulb special"></i> ', $txt["f_info"], '</a></li>
+          <li><a href="#"><i class="far fa-chart-bar special"></i> ', $txt["f_trends"], '</a></li>
+          <li><a href="#"><i class="fab fa-twitter special"></i> ', $txt["f_twitter_iwannacrypto"], '</a></li>
         </ul>
       </div>
       <div class="col-sm-2">
-        <h5>Social</h5>
+        <h5>', $txt["f_social"], '</h5>
         <ul>
-          <li><a href="http://www.iwannaweb.ro/blog/"><i class="fas fa-pen-square special"></i> Blog</a></li>
-          <li><a href="#"><i class="fa fa-bullhorn special"></i> Recomandări</a></li>
-          <li><a href="#"><i class="fa fa-paper-plane special"></i> Telegram</a></li>
+          <li><a href="http://www.iwannaweb.ro/blog/"><i class="fas fa-pen-square special"></i> ', $txt["f_blog_small"], '</a></li>
+          <li><a href="#"><i class="fa fa-bullhorn special"></i> ', $txt["f_recomm"], '</a></li>
+          <li><a href="#"><i class="fa fa-paper-plane special"></i> ', $txt["f_telegram"], '</a></li>
         </ul>
       </div>
       <div class="col-sm-3">
@@ -37,12 +37,12 @@ function addFooterHtml($language, $pagename) {
           <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
           <a href="#" class="google"><i class="fab fa-github"></i></a>
         </div>
-        <a href="http://www.iwannaweb.ro/contact.asp" class="btn btn-default">Contactează-ne</a>
+        <a href="http://www.iwannaweb.ro/contact.asp" class="btn btn-default">', $txt["f_contact_us"], '</a>
       </div>
     </div>
   </div>
   <div class="footer-copyright">
-    <p>© 2013-', date("Y"), ' <a href="http://www.iwannaweb.ro">iwannaweb</a> | Experience web freedom </p>
+    <p>© 2013-', date("Y"), ' <a href="http://www.iwannaweb.ro">iwannaweb</a> | ', $txt["f_slogan"], ' </p>
   </div>
 </footer>';
 }

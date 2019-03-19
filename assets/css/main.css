@@ -17,7 +17,7 @@
 	min-height: 60px;
 }
 .topmenu {
-	background-color: #4484CE; /* cerulean */
+	background-color: #262626;/* #4484CE;  cerulean */
 	color: #F9CF00; /* light */
 	min-height: 40px;
 	display: flex;
@@ -136,7 +136,7 @@ li.activ {
 }
 
 #iwwFooter h5 {
-    font-size: 18px;
+    font-size: 14px;
     color: white;
     font-weight: bold;
     margin-top: 30px;

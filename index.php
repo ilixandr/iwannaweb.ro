@@ -17,7 +17,7 @@
   <body>
     <?php addMenuHtml($language, "index")?>
     <div class="container">
-      <div class="col-sm-8">
+      <div class="col-sm-7">
         <h1>&nbsp;&nbsp;&nbsp;<a href="http://www.iwannaweb.ro">Cluj web design</a><br /> <span>web designer &amp; promovare site</span></h1>
         <p>Orice web designer ştie că secretul unei afaceri de succes stă în felul în care îţi faci reclamă. Potenţialii clienţi caută 
         soluţia problemei cu un "<a href="https://www.google.ro/?gws_rd=cr#q=site+cluj+iwanna.web" target="_blank">Google search</a>". Iar existenţa unei firme fără o creare de site, 
@@ -25,7 +25,7 @@
         concurentului, trecând direct prin faţa uşii dumneavoastră. De ce a ales asta? Pentru că acest concurent a trecut de la creare de site la 
         optimizare de site, apoi la promovarea site-ului si in final la succes. E mai comod aşa!</p>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-5">
         <img src="assets/img/slider/slider.gif" alt=""/>
       </div>
     </div>
