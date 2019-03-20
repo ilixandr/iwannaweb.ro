@@ -92,6 +92,14 @@ li.activ {
 	color: #000000;
 	padding: 20px 20px;
 }
+.navbar-inverse .navbar-nav > li > a.lang-color {
+	color: #FFFFFF;
+	padding: 20px 20px;
+}
+.navbar-inverse .navbar-nav > li > a.lang-color:hover {
+	color: #F9CF00;
+	padding: 20px 20px;
+}
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
 	color: #0630FF;
 	padding: 20px 20px;
