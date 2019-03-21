@@ -5,7 +5,7 @@ function addFooterHtml($language, $pagename) {
   <div class="container">
     <div class="row">
       <div class="col-sm-3">
-        <h2 class="logo"><a href="http://www.iwannaweb.ro"><img src="', $pagename == "crypto" ? "../" : "", 'assets/img/logo.png" alt=""/></a></h2>
+        <h2 class="logo"><a href="http://www.iwannaweb.ro"><img src="', $pagename == "crypto" | $pagename == "blog" ? "../" : "", 'assets/img/logo.png" alt=""/></a></h2>
       </div>
       <div class="col-sm-2">
         <h5>', $txt["f_webdev_small"], '</h5>
@@ -92,14 +92,14 @@ function addMenuHtml($language, $pagename) {
         <li class="dropdown">
           <a class="dropdown-toggle lang-color" data-toggle="dropdown" href="">', 
             $txt["lang"], 
-            '<img class="img-flag" src="', $pagename == "crypto" ? "../" : "", 'assets/img/', $txt["lang_flag_0"], '.svg" alt=""><span class="caret"></span>
+            '<img class="img-flag" src="', $pagename == "crypto" | $pagename =="blog" ? "../" : "", 'assets/img/', $txt["lang_flag_0"], '.svg" alt=""><span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a href="', $pagename, '.php?lang=', substr($txt["lang_flag_1"], 0, 2), '"><img class="img-flag" src="', $pagename == "crypto" ? "../" : "",'assets/img/', $txt["lang_flag_1"], '.svg">', $txt["lang_alt_1"], '</a>
+              <a href="', $pagename, '.php?lang=', substr($txt["lang_flag_1"], 0, 2), '"><img class="img-flag" src="', $pagename == "crypto" | $pagename =="blog" ? "../" : "",'assets/img/', $txt["lang_flag_1"], '.svg">', $txt["lang_alt_1"], '</a>
             </li>
             <li>
-              <a href="', $pagename, '.php?lang=', substr($txt["lang_flag_2"], 0, 2), '"><img class="img-flag" src="', $pagename =="crypto" ? "../" : "", 'assets/img/', $txt["lang_flag_2"], '.svg">', $txt["lang_alt_2"], '</a>
+              <a href="', $pagename, '.php?lang=', substr($txt["lang_flag_2"], 0, 2), '"><img class="img-flag" src="', $pagename =="crypto" | $pagename =="blog" ? "../" : "", 'assets/img/', $txt["lang_flag_2"], '.svg">', $txt["lang_alt_2"], '</a>
             </li> 
           </ul>
         </li> 
@@ -123,7 +123,7 @@ function addMenuHtml($language, $pagename) {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand navbar-brand-fit" href="index.html"><img class="logo" src="', $pagename == "crypto" ? "../" : "", 'assets/img/logo.png" alt=""/></a>
+      <a class="navbar-brand navbar-brand-fit" href="index.html"><img class="logo" src="', $pagename == "crypto" | $pagename =="blog" ? "../" : "", 'assets/img/logo.png" alt=""/></a>
     </div>
     <div id="sticky-header">
       <div class="collapse navbar-collapse" id="myNavbar">
