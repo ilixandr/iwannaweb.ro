@@ -5,4 +5,4 @@ CREATE TABLE `users` (
     `role` enum('Admin', 'Contributor') DEFAULT NULL,
     `password` varchar(255) NOT NULL,
     `created` timestamp NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=INNODB DEFAULT CHARSET=latin1;
+) ENGINE=INNODB DEFAULT CHARSET=utf8;
