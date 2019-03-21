@@ -9,6 +9,10 @@
 }
 .spacer-dash{clear: both; border-bottom: 1px dashed #999;}
 
+.navbar {
+	border-radius: 0; /* override default bootstrap's "4px" */
+	border: 1px solid #000000; /* override default bootstrap's "1px solid transparent" */
+}
 .container-fluid-white {
 	background-color: #FFFFFF;
 	display: flex;
@@ -144,7 +148,7 @@ li.activ {
 }
 
 #iwwFooter h5 {
-    font-size: 14px;
+    font-size: 13px;
     color: white;
     font-weight: bold;
     margin-top: 30px;

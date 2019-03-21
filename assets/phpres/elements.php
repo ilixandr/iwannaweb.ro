@@ -132,21 +132,21 @@ function addMenuHtml($language, $pagename) {
           <li class="dropdown ', $webdevIsActive,'">
             <a class="dropdown-toggle" data-toggle="dropdown" href="">', $txt["webdev"],'<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="webdev.php">', $txt["services"], '</a></li>
-              <li><a href="#">', $txt["pricing"], '</a></li>
-              <li><a href="#">', $txt["software"], '</a></li>
+              <li><a href="webdev.php', $language == "ro" ? "" : ($language == "en" ? "?lang=en" : "?lang=fr"), '">', $txt["services"], '</a></li>
+              <li><a href="#', $language == "ro" ? "" : ($language == "en" ? "?lang=en" : "?lang=fr"), '">', $txt["pricing"], '</a></li>
+              <li><a href="#', $language == "ro" ? "" : ($language == "en" ? "?lang=en" : "?lang=fr"), '">', $txt["software"], '</a></li>
             </ul>
           </li>
           <li class="dropdown ', $portfolioIsActive,'">
             <a class="dropdown-toggle" data-toggle="dropdown" href="http://www.iwannaweb.ro/portofoliu_page3.html">', $txt["portfolio"], '<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="portfolio.php">', $txt["recent"], '</a></li>
-              <li><a href="#">', $txt["archive"], '</a></li>
+              <li><a href="portfolio.php', $language == "ro" ? "" : ($language == "en" ? "?lang=en" : "?lang=fr"), '">', $txt["recent"], '</a></li>
+              <li><a href="#', $language == "ro" ? "" : ($language == "en" ? "?lang=en" : "?lang=fr"), '">', $txt["archive"], '</a></li>
             </ul>
           </li>
-          <li', $cryptoIsActive,'><a href="crypto/index.php">', $txt["crypto"], '</a></li>
-          <li', $blogIsActive, '><a href="http://www.iwannaweb.ro/blog/">', $txt["blog"], '</a></li>
-          <li', $contactIsActive, '><a href="contact.php">', $txt["contact"], '</a></li>
+          <li', $cryptoIsActive,'><a href="http://localhost/iwannaweb.ro/crypto/index.php', $language == "ro" ? "" : ($language == "en" ? "?lang=en" : "?lang=fr"), '">', $txt["crypto"], '</a></li>
+          <li', $blogIsActive, '><a href="http://localhost/iwannaweb.ro/blog/', $language == "ro" ? "" : ($language == "en" ? "index.php?lang=en" : "index.php?lang=fr"), '">', $txt["blog"], '</a></li>
+          <li', $contactIsActive, '><a href="contact.php', $language == "ro" ? "" : ($language == "en" ? "?lang=en" : "?lang=fr"), '">', $txt["contact"], '</a></li>
         </ul>
       </div>
     </div>

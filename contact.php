@@ -1,6 +1,9 @@
 ﻿<?php
 /*======================================
   == ionut @ 17-Mar-2019              ==
+  ======================================
+  == Note: php's mail() does not work ==
+  == on localhost !                   ==
   ======================================*/
   global $language;
   $language = isset($_GET["lang"]) ? ($_GET["lang"] == "en" ? "en" : ($_GET["lang"] == "fr" ? "fr" : "ro")) : "ro";
@@ -17,14 +20,13 @@
   <body>
   <?php addMenuHtml($language, "contact")?>
   <?php
-  $action = $_REQUEST['action'];
-  if ($action == "") { /* display the contact form */
+  if (!isset($_POST["submit"])) { /* display the contact form */
   ?>
     <div class="container">
 	  <h2>Contact</h2>
 	  <div class="col-sm-9">
 		  <h4>Trimiteţi-ne un mesaj...</h4>
-		  <form id="form1" action="" method="POST" enctype="multipart/form-data">
+		  <form action="" method="POST" enctype="multipart/form-data">
 			<div class="form-group">
 			  <label for="E-mail">Adresa email</label>
 				<input type="text" class="form-control" name="E-mail" id="E-mail"/>
@@ -39,7 +41,7 @@
 			<div class="form-group">
 			  <label for="Mesaj">Mesaj</label>
 				<textarea id="text" name="Mesaj" rows="3" cols="0" class="form-control"></textarea>
-			</div<
+      </div>
 			<div class="cleaner h10"></div>				
 			<input type="submit" value="Trimite" id="submit" name="submit" class="btn btn-primary" />
 			<input type="reset" value="Resetare" id="reset" name="reset" class="btn btn-danger" />
