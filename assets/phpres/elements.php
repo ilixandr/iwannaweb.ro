@@ -96,10 +96,10 @@ function addMenuHtml($language, $pagename) {
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a href="', $pagename, '.php?lang=', substr($txt["lang_flag_1"], 0, 2), '"><img class="img-flag" src="', $pagename == "crypto" | $pagename =="blog" ? "../" : "",'assets/img/', $txt["lang_flag_1"], '.svg">', $txt["lang_alt_1"], '</a>
+              <a href="', $pagename == "crypto" | $pagename == "blog" ? "index" : $pagename, '.php?lang=', substr($txt["lang_flag_1"], 0, 2), '"><img class="img-flag" src="', $pagename == "crypto" | $pagename =="blog" ? "../" : "",'assets/img/', $txt["lang_flag_1"], '.svg">', $txt["lang_alt_1"], '</a>
             </li>
             <li>
-              <a href="', $pagename, '.php?lang=', substr($txt["lang_flag_2"], 0, 2), '"><img class="img-flag" src="', $pagename =="crypto" | $pagename =="blog" ? "../" : "", 'assets/img/', $txt["lang_flag_2"], '.svg">', $txt["lang_alt_2"], '</a>
+              <a href="', $pagename == "crypto" | $pagename == "blog" ? "index" : $pagename, '.php?lang=', substr($txt["lang_flag_2"], 0, 2), '"><img class="img-flag" src="', $pagename =="crypto" | $pagename =="blog" ? "../" : "", 'assets/img/', $txt["lang_flag_2"], '.svg">', $txt["lang_alt_2"], '</a>
             </li> 
           </ul>
         </li> 
@@ -132,7 +132,7 @@ function addMenuHtml($language, $pagename) {
           <li class="dropdown ', $webdevIsActive,'">
             <a class="dropdown-toggle" data-toggle="dropdown" href="">', $txt["webdev"],'<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="webdev.php', $language == "ro" ? "" : ($language == "en" ? "?lang=en" : "?lang=fr"), '">', $txt["services"], '</a></li>
+              <li><a href="http://localhost/iwannaweb.ro/webdev.php', $language == "ro" ? "" : ($language == "en" ? "?lang=en" : "?lang=fr"), '">', $txt["services"], '</a></li>
               <li><a href="#', $language == "ro" ? "" : ($language == "en" ? "?lang=en" : "?lang=fr"), '">', $txt["pricing"], '</a></li>
               <li><a href="#', $language == "ro" ? "" : ($language == "en" ? "?lang=en" : "?lang=fr"), '">', $txt["software"], '</a></li>
             </ul>
@@ -140,13 +140,13 @@ function addMenuHtml($language, $pagename) {
           <li class="dropdown ', $portfolioIsActive,'">
             <a class="dropdown-toggle" data-toggle="dropdown" href="http://www.iwannaweb.ro/portofoliu_page3.html">', $txt["portfolio"], '<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="portfolio.php', $language == "ro" ? "" : ($language == "en" ? "?lang=en" : "?lang=fr"), '">', $txt["recent"], '</a></li>
+              <li><a href="http://localhost/iwannaweb.ro/portfolio.php', $language == "ro" ? "" : ($language == "en" ? "?lang=en" : "?lang=fr"), '">', $txt["recent"], '</a></li>
               <li><a href="#', $language == "ro" ? "" : ($language == "en" ? "?lang=en" : "?lang=fr"), '">', $txt["archive"], '</a></li>
             </ul>
           </li>
           <li', $cryptoIsActive,'><a href="http://localhost/iwannaweb.ro/crypto/index.php', $language == "ro" ? "" : ($language == "en" ? "?lang=en" : "?lang=fr"), '">', $txt["crypto"], '</a></li>
           <li', $blogIsActive, '><a href="http://localhost/iwannaweb.ro/blog/', $language == "ro" ? "" : ($language == "en" ? "index.php?lang=en" : "index.php?lang=fr"), '">', $txt["blog"], '</a></li>
-          <li', $contactIsActive, '><a href="contact.php', $language == "ro" ? "" : ($language == "en" ? "?lang=en" : "?lang=fr"), '">', $txt["contact"], '</a></li>
+          <li', $contactIsActive, '><a href="http://localhost/iwannaweb.ro/contact.php', $language == "ro" ? "" : ($language == "en" ? "?lang=en" : "?lang=fr"), '">', $txt["contact"], '</a></li>
         </ul>
       </div>
     </div>
