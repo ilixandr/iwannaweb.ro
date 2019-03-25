@@ -9,6 +9,7 @@ CREATE TABLE `posts` (
   `slug` varchar(255) NOT NULL UNIQUE,
   `image` varchar(255) NOT NULL,
   `image_alt` varchar(255) NOT NULL,
+  `short_text` text NOT NULL,
   `body` text NOT NULL,
   `published` tinyint(1) NOT NULL,
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP

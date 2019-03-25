@@ -21,14 +21,15 @@
     <div class="container">
       <div class="col-sm-9">
         <?php $posts = getPublishedPosts($conn)?>
+        <?php foreach ($posts as $post): ?>
         <div class="post_box">
-          <h2><?php echo $posts[3]['title']?></h2>
+          <h2><a href="http://localhost/iwannaweb.ro/blog/post.php?id=<?php echo $post['id']?>" target="_blank"><?php echo $post['title']?></a></h2>
           <div class="post_meta">
-            <span class="cat">Postat la <?php echo date("d-m-Y", strtotime($posts[3]['created']))?> </span> | <em>Categoria: Diverse</em>
+            <span class="cat">Postat la <?php echo date("d-m-Y", strtotime($post['created']))?> </span> | <em><?php echo $txt["blog_cathegory"]?>: <?php echo $txt["blog_cat_" . $post['cathegory']]?></em>
           </div>
-          <img src="http://localhost/iwannaweb.ro/assets/img/blog/top-img/<?php echo $posts[3]['image']?>"  alt="webdesign in Cluj Napoca | blog securitate IT"/>
-          <?php echo $posts[3]['body']?>
+          <?php echo $post['short_text'] . ' <a href="http://localhost/iwannaweb.ro/blog/post.php?id=' . $post['id'] . '" target="_blank"> Read more...</a>'?>
         </div>
+        <?php endforeach?>
       </div>
       <div class="col-sm-3">
         something else here
