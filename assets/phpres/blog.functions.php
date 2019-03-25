@@ -12,6 +12,19 @@ function getPublishedPosts($conn) {
 
 	return $posts;
 }
+function getMaxId() {
+	global $conn;
+	$sql = "SELECT max(id) FROM posts WHERE published=true";
+	$result = mysqli_query($conn, $sql);
+  
+  return mysqli_fetch_assoc($result);
+}
+function getSinglePost($id) {
+	global $conn;
+	$sql = "SELECT * FROM posts WHERE id=$id AND published=true";
+	$result = mysqli_query($conn, $sql);
 
+	return mysqli_fetch_assoc($result);
+}
 // more functions to come here ...
 ?>

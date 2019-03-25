@@ -54,5 +54,10 @@ $txt["f_recomm"] = "Recommendations";
 $txt["f_telegram"] = "Telegram";
 $txt["f_contact_us"] = "Contact us";
 $txt["f_slogan"] = "Experience web freedom";
-
+$txt["blog_cathegory"] = "Cathegory";
+$txt["blog_cat_other"] = "Other";
+$txt["blog_cat_software"] = "Software";
+$txt["blog_cat_hardware"] = "Hardware";
+$txt["blog_cat_security"] = "Security";
+$txt["blog_cat_programming"] = "Programming";
 ?>

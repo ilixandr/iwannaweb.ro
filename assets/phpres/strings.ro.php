@@ -54,5 +54,10 @@ $txt["f_recomm"] = "Recomandări";
 $txt["f_telegram"] = "Telegram";
 $txt["f_contact_us"] = "Contactează-ne";
 $txt["f_slogan"] = "Experimentează libertatea internetului";
-
+$txt["blog_cathegory"] = "Categoria";
+$txt["blog_cat_other"] = "Diverse";
+$txt["blog_cat_software"] = "Software";
+$txt["blog_cat_hardware"] = "Hardware";
+$txt["blog_cat_security"] = "Securitate";
+$txt["blog_cat_programming"] = "Programare";
 ?>
