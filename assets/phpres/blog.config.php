@@ -2,7 +2,7 @@
 session_start();
 // Change this to your connection info.
 $DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'phpmyadmin';
+$DATABASE_USER = 'root';
 $DATABASE_PASS = 'Azerty00';
 $DATABASE_NAME = 'blogdb';
 // Try and connect using the info above.

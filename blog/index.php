@@ -22,12 +22,12 @@
       <div class="col-sm-9">
         <?php $posts = getPublishedPosts($conn)?>
         <div class="post_box">
-          <h2><?php echo $posts[0]['title']?></h2>
+          <h2><?php echo $posts[3]['title']?></h2>
           <div class="post_meta">
-            <span class="cat">Postat la <?php echo date("d-m-Y", strtotime($posts[0]['created']))?> </span> | <em>Categoria: Diverse</em>
+            <span class="cat">Postat la <?php echo date("d-m-Y", strtotime($posts[3]['created']))?> </span> | <em>Categoria: Diverse</em>
           </div>
-          <img src="http://localhost/iwannaweb.ro/assets/img/blog/<?php echo $posts[0]['image']?>"  alt="webdesign in Cluj Napoca | blog securitate IT"/>
-          <?php echo $posts[0]['body']?>
+          <img src="http://localhost/iwannaweb.ro/assets/img/blog/top-img/<?php echo $posts[3]['image']?>"  alt="webdesign in Cluj Napoca | blog securitate IT"/>
+          <?php echo $posts[3]['body']?>
         </div>
       </div>
       <div class="col-sm-3">
