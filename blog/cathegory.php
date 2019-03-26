@@ -1,41 +1,37 @@
 <?php
 /*======================================
-  == ionut @ 25-Mar-2019              ==
+  == ionut @ 26-Mar-2019              ==
   ======================================*/
-
-  
   require_once(dirname(dirname(__FILE__)) . '/assets/phpres/blog.config.php');
   require_once(dirname(dirname(__FILE__)) . '/assets/phpres/blog.functions.php');
-  /*$posts = getPublishedPosts($conn);*/
-  $max = getMaxId()['max(id)'];
-  $id = isset($_GET["id"]) ? min($max,max(1, floor($_GET["id"]))) : $max;
-  $post = getSinglePost($id); /* make sure this is not sql-injectable */
-  $posts = getPublishedPosts($conn);
-  $language = $post['language'];
-  require_once(dirname(dirname(__FILE__)) . '/assets/phpres/strings.' . $post['language'] . '.php');
+  $cat = isset($_GET["cat"]) ? ($_GET["cat"] == "other" || $_GET["cat"] == "software" || $_GET["cat"] == "hardware" || $_GET["cat"] == "security" || $_GET["cat"] == "programming" ? $_GET["cat"] : "other") : "other";
+  $language = isset($_GET["lang"]) ? ($_GET["lang"] == "en" ? "en" : ($_GET["lang"] == "fr" ? "fr" : "ro")) : "ro";
+  $posts = getPostsByCathegory($conn, $cat); /* make sure this is not sql-injectable */
+  require_once(dirname(dirname(__FILE__)) . '/assets/phpres/strings.' . $language . '.php');
   require_once(dirname(dirname(__FILE__)) . '/assets/phpres/elements.php');
 
   $pagename = basename(__FILE__, ".php");
-  $pagetitle = $post['title'];
-  $pagekeywords = $post['keywords'];
-  $pagedescription = $post['description'];
+  $pagetitle = $txt["blog_cat_title"];
+  $pagekeywords = $txt["blog_cat_title"];
+  $pagedescription = $txt["blog_cat_title"];
 ?>
 <!DOCTYPE html>
-<html lang=<?php echo $post['language']?>>
-<?php addHeadHtml($post['language'], $post['title'], $post['keywords'], $post['description'])?>
+<html lang=<?php echo $language?>>
+<?php addHeadHtml($language, $pagetitle, $pagekeywords, $pagedescription)?>
 <body>
-  <?php addMenuHtml($post['language'], "blog")?>
+  <?php addMenuHtml($language, "blog")?>
     <div class="container">
-      <div class="col-sm-9">
-        
+      <div class="col-xs-9 col-md-9">
+        <h1><?php echo $txt["blog_cat_name"] . $txt["blog_cat_" . $cat]?></h1>
+        <?php foreach (array_reverse($posts) as $post):?>
         <div class="post_box">
-          <h2><?php echo $post['title']?></h2>
+          <h2><a  class="blogtitles" href="http://localhost/iwannaweb.ro/blog/post.php?id=<?php echo $post['id']?>" target="_blank"><?php echo $post['title']?></a></h2>
           <div class="post_meta">
             <span class="cat"><?php echo $txt["blog_posted_on"] . date("d-m-Y", strtotime($post['created']))?> </span> | <em><?php echo $txt["blog_cathegory"]?>: <?php echo $txt["blog_cat_" . $post['cathegory']]?></em>
           </div>
-          <img src="http://localhost/iwannaweb.ro/assets/img/blog/top-img/<?php echo $post['image']?>"  alt="<?php echo $post['image_alt']?>"/>
-          <?php echo $post['body']?>
-        </div>
+          <?php echo $post['short_text'] . ' <a href="http://localhost/iwannaweb.ro/blog/post.php?id=' . $post['id'] . '" target="_blank"> <button class="btn btn-default">Read more...</button></a>'?>
+        </div> 
+        <?php endforeach?>
       </div>
       <div class="col-xs-3 col-md-3">
         <div class="side-content">
@@ -64,7 +60,7 @@
             <ul class="blog-cat-list">
               <?php
               $len = count($posts);
-              for ($i = $len - 1; $i > $len - 11; $i--) {
+              for ($i = $len - 1; $i > max(-1, $len - 11); $i--) {
                 ?>
                 <li class="blog-article">
                   <a class="blogtitles" href="http://localhost/iwannaweb.ro/blog/post.php?id=<?php echo $posts[$i]["id"]?>">+ <?php echo $posts[$i]['title']?></a>

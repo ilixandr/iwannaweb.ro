@@ -55,9 +55,16 @@ $txt["f_telegram"] = "Telegram";
 $txt["f_contact_us"] = "Contact us";
 $txt["f_slogan"] = "Experience web freedom";
 $txt["blog_cathegory"] = "Cathegory";
+$txt["blog_cathegories"] = "Cathegories";
 $txt["blog_cat_other"] = "Other";
 $txt["blog_cat_software"] = "Software";
 $txt["blog_cat_hardware"] = "Hardware";
 $txt["blog_cat_security"] = "Security";
 $txt["blog_cat_programming"] = "Programming";
+$txt["blog_posted_on"] = "Posted on ";
+$txt["blog_recent_posts"] = "Recent articles...";
+$txt["blog_cat_name"] = "Articles in cathegory ";
+$txt["blog_cat_title"] = "Article cathegories on iwannawe.ro's blog";
+$txt["blog_cat_keywords"] = "iwannaweb.ro, blog, cathegories";
+$txt["blog_cat_description"] = "Blog www.iwannaweb.ro. Articles' cathegories are Other, Software, Hardware, Security and Programming. ";
 ?>

@@ -19,20 +19,58 @@
 <body>
   <?php addMenuHtml($language, "blog")?>
     <div class="container">
-      <div class="col-sm-9">
-        <?php $posts = getPublishedPosts($conn)?>
-        <?php foreach ($posts as $post): ?>
+      <div class="col-xs-9 col-md-9">
+        <?php 
+        $posts = getPublishedPosts($conn);
+        foreach (array_reverse($posts) as $post): 
+        ?>
         <div class="post_box">
-          <h2><a href="http://localhost/iwannaweb.ro/blog/post.php?id=<?php echo $post['id']?>" target="_blank"><?php echo $post['title']?></a></h2>
+          <h2><a  class="blogtitles" href="http://localhost/iwannaweb.ro/blog/post.php?id=<?php echo $post['id']?>" target="_blank"><?php echo $post['title']?></a></h2>
           <div class="post_meta">
-            <span class="cat">Postat la <?php echo date("d-m-Y", strtotime($post['created']))?> </span> | <em><?php echo $txt["blog_cathegory"]?>: <?php echo $txt["blog_cat_" . $post['cathegory']]?></em>
+            <span class="cat"><?php echo $txt["blog_posted_on"] . date("d-m-Y", strtotime($post['created']))?> </span> | <em><?php echo $txt["blog_cathegory"]?>: <?php echo $txt["blog_cat_" . $post['cathegory']]?></em>
           </div>
-          <?php echo $post['short_text'] . ' <a href="http://localhost/iwannaweb.ro/blog/post.php?id=' . $post['id'] . '" target="_blank"> Read more...</a>'?>
+          <?php echo $post['short_text'] . ' <a href="http://localhost/iwannaweb.ro/blog/post.php?id=' . $post['id'] . '" target="_blank"> <button class="btn btn-default">Read more...</button></a>'?>
         </div>
         <?php endforeach?>
       </div>
-      <div class="col-sm-3">
-        something else here
+      <div class="col-xs-3 col-md-3">
+        <div class="side-content">
+          <div class="cat-box">
+            <h3><?php echo $txt["blog_cathegories"]?></h3>
+            <ul class="blog-cat-list">
+              <li>
+                <a class="blogtitles" href="http://localhost/iwannaweb.ro/blog/cathegory.php?cat=other&lang=<?php echo $language?>"><?php echo $txt["blog_cat_other"]?></a>
+              </li>
+              <li>
+                <a class="blogtitles" href="http://localhost/iwannaweb.ro/blog/cathegory.php?cat=software&lang=<?php echo $language?>"><?php echo $txt["blog_cat_software"]?></a>
+              </li>
+              <li>
+                <a class="blogtitles" href="http://localhost/iwannaweb.ro/blog/cathegory.php?cat=hardware&lang=<?php echo $language?>"><?php echo $txt["blog_cat_hardware"]?></a>
+              </li>
+              <li>
+                <a class="blogtitles" href="http://localhost/iwannaweb.ro/blog/cathegory.php?cat=security&lang=<?php echo $language?>"><?php echo $txt["blog_cat_security"]?></a>
+              </li>
+              <li>
+                <a class="blogtitles" href="http://localhost/iwannaweb.ro/blog/cathegory.php?cat=programming&lang=<?php echo $language?>"><?php echo $txt["blog_cat_programming"]?></a>
+              </li>
+            </ul>
+          </div>
+          <div class="cat-box">
+            <h3><?php echo $txt["blog_recent_posts"]?></h3>
+            <ul class="blog-cat-list">
+              <?php
+              $len = count($posts);
+              for ($i = $len - 1; $i > $len - 11; $i--) {
+                ?>
+                <li class="blog-article">
+                  <a class="blogtitles" href="http://localhost/iwannaweb.ro/blog/post.php?id=<?php echo $posts[$i]["id"]?>">+ <?php echo $posts[$i]['title']?></a>
+                </li>
+                <?php
+              }
+              ?>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <div class="cleaner"></div>

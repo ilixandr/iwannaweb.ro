@@ -55,9 +55,16 @@ $txt["f_telegram"] = "Telegram";
 $txt["f_contact_us"] = "Contactează-ne";
 $txt["f_slogan"] = "Experimentează libertatea internetului";
 $txt["blog_cathegory"] = "Categoria";
+$txt["blog_cathegories"] = "Categorii";
 $txt["blog_cat_other"] = "Diverse";
 $txt["blog_cat_software"] = "Software";
 $txt["blog_cat_hardware"] = "Hardware";
 $txt["blog_cat_security"] = "Securitate";
 $txt["blog_cat_programming"] = "Programare";
+$txt["blog_posted_on"] = "Postat la ";
+$txt["blog_recent_posts"] = "Articole recente...";
+$txt["blog_cat_name"] = "Articole din categoria ";
+$txt["blog_cat_title"] = "Categorii de articole pe blogul iwannawe.ro";
+$txt["blog_cat_keywords"] = "iwannaweb.ro, blog, categorii";
+$txt["blog_cat_description"] = "Blog www.iwannaweb.ro. Categoriile articolelor sunt Diverse, Software, Hardware, Securitate si Programare. ";
 ?>

@@ -112,6 +112,31 @@ li.activ {
 	background-color: #333;
 }
 
+.blogtitles {
+	color: #000;
+	text-decoration: none;
+}
+.blogtitles:hover {
+	color: #2A2A01;
+	text-decoration: none;
+}
+.side-content {
+	height: 100vh;
+}
+.blog-cat-list {
+	list-style: none;
+}
+.cat-box {
+	border-left: 5px solid #4484CE;
+	background-color: lightgray;
+	border-radius: 2px;
+	padding: 10px 0 10px 10px;
+	margin-bottom: 5px;
+}
+.blog-article {
+	padding: 2px 0 2px 0;
+	border-top: 1px dotted black;
+}
 
 #iwwFooter {
     /*background-color: #3c3d41;*/
