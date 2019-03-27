@@ -21,7 +21,7 @@
     <div class="container">
       <div class="col-xs-9 col-md-9">
         <?php 
-        $posts = getPublishedPosts($conn);
+        $posts = getPublishedPosts($conn, $language);
         foreach (array_reverse($posts) as $post): 
         ?>
         <div class="post_box">
@@ -60,7 +60,7 @@
             <ul class="blog-cat-list">
               <?php
               $len = count($posts);
-              for ($i = $len - 1; $i > $len - 11; $i--) {
+              for ($i = $len - 1; $i > max(-1, $len - 11); $i--) {
                 ?>
                 <li class="blog-article">
                   <a class="blogtitles" href="http://localhost/iwannaweb.ro/blog/post.php?id=<?php echo $posts[$i]["id"]?>">+ <?php echo $posts[$i]['title']?></a>

@@ -2,9 +2,9 @@
 /*======================
   = ionut @21-mar-2019 =
   ======================*/
-function getPublishedPosts($conn) {
-    global $conn;
-	$sql = "SELECT * FROM posts WHERE published=true";
+function getPublishedPosts($conn, $language) {
+  global $conn;
+	$sql = "SELECT * FROM posts WHERE language='" . $language . "' AND published=true";
 	$result = mysqli_query($conn, $sql);
 	// fetch all posts as an associative array called $posts
 	$posts = mysqli_fetch_all($result, MYSQLI_ASSOC);

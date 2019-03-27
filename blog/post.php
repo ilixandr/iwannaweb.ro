@@ -10,8 +10,9 @@
   $max = getMaxId()['max(id)'];
   $id = isset($_GET["id"]) ? min($max,max(1, floor($_GET["id"]))) : $max;
   $post = getSinglePost($id); /* make sure this is not sql-injectable */
-  $posts = getPublishedPosts($conn);
   $language = $post['language'];
+  $posts = getPublishedPosts($conn, $language);
+  
   require_once(dirname(dirname(__FILE__)) . '/assets/phpres/strings.' . $post['language'] . '.php');
   require_once(dirname(dirname(__FILE__)) . '/assets/phpres/elements.php');
 
@@ -64,7 +65,7 @@
             <ul class="blog-cat-list">
               <?php
               $len = count($posts);
-              for ($i = $len - 1; $i > $len - 11; $i--) {
+              for ($i = $len - 1; $i > max(-1, $len - 11); $i--) {
                 ?>
                 <li class="blog-article">
                   <a class="blogtitles" href="http://localhost/iwannaweb.ro/blog/post.php?id=<?php echo $posts[$i]["id"]?>">+ <?php echo $posts[$i]['title']?></a>
