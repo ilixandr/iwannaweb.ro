@@ -23,49 +23,46 @@
   if (!isset($_POST["submit"])) { /* display the contact form */
   ?>
     <div class="container">
-	  <h2>Contact</h2>
+    <h2><?php echo $txt["contact_contact_us"]?></h2>
+    <h5><?php echo $txt["contact_we_will_reply"]?></h5>
+    <div class="cleaner h10"></div>
+    <div class="cleaner h10"></div>
 	  <div class="col-sm-9">
-		  <h4>Trimiteţi-ne un mesaj...</h4>
-		  <form action="" method="POST" enctype="multipart/form-data">
-			<div class="form-group">
-			  <label for="E-mail">Adresa email</label>
-				<input type="text" class="form-control" name="E-mail" id="E-mail"/>
-			  <!-- https://getbootstrap.com/docs/4.0/components/forms/ -->
-      </div>
-			<div class="cleaner h10"></div>
-			<div class="form-group">
-			  <label for="Subiect">Subiect</label>
-				<input type="text" class="form-control" name="Subiect" id="Subiect"/>				               
-			</div>
-			<div class="cleaner h10"></div>
-			<div class="form-group">
-			  <label for="Mesaj">Mesaj</label>
-				<textarea id="text" name="Mesaj" rows="3" cols="0" class="form-control"></textarea>
-      </div>
-			<div class="cleaner h10"></div>				
-			<input type="submit" value="Trimite" id="submit" name="submit" class="btn btn-primary" />
-			<input type="reset" value="Resetare" id="reset" name="reset" class="btn btn-danger" />
-		  </form>
+      <fieldset class="fldset-style">
+        <legend class="lgnd-style"><?php $txt["contact_legend_text"]?></legend>
+		    <form action="" method="POST" enctype="multipart/form-data">
+			    <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">@</span>
+				    <input type="text" class="form-control" name="E-mail" id="E-mail" placeholder="<?php echo $txt["contact_email"]?>"/>
+          </div>
+			    <div class="cleaner h10"></div>
+			    <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"><?php echo $txt["subject"]?></span>
+				    <input type="text" class="form-control" name="Subiect" id="Subiect" placeholder="<?php echo $txt["contact_subject_placeholder"]?>"/>				               
+			    </div>
+			    <div class="cleaner h10"></div>
+			    <div class="form-group">
+			      <span class="input-group-addon input-group-addon-left" id="basic-addon1"><?php echo $txt["message"]?></span>
+				    <textarea id="text" name="Mesaj" rows="3" cols="0" class="form-control"></textarea>
+          </div>
+			    <div class="cleaner h10"></div>				
+          <div class="btn-grp-right">
+            <input type="submit" value="<?php echo $txt["send"]?>" id="submit" name="submit" class="btn btn-primary" />
+            <div class="separator-space"></div>
+            <input type="reset" value="<?php echo $txt["reset"]?>" id="reset" name="reset" class="btn btn-danger" />
+          </div>
+        </form>
+      </fieldset>
 			<div class="cleaner h10"></div>		
 	  </div>
     <div class="col-sm-3">
 	    <div class="col_fw">	
-          <h4>Adresa:</h4>
-          <h6><strong>iwanna.web | Cluj web designer</strong></h6>
-          400492, Cluj-Napoca, <br/>
-          Cluj, România<br/>
-          "web design pentru toata lumea"<br/><br/>
-		      <strong>Telefon:</strong> ??? <br />
-          <strong>E-mail:</strong> <a href="mailto:helpdesk@iwannaweb.ro">helpdesk@iwannaweb.ro</a>
+          <h4><?php echo $txt["how_to_get_in_touch"]?></h4>
+          <?php echo $txt["get_in_touch_text"];?>
       </div>            
       <div class="col_fw_last">
-        <h4>Unde ne gasiţi...</h4>
-        <div id="map">
-			    <a class="pirobox" href="assets/img/webdesign_map_big.png" title="Adresa noastra...">
-			      <img src="assets/img/webdesign_map_small.png" alt="Cluj web designer, creare site Cluj" />
-			    </a>
-		    </div>                
-		    <a href="https://maps.google.ro/maps?f=q&amp;source=s_q&amp;hl=ro&amp;geocode=&amp;q=Strada+Meteor,+Cluj-Napoca,+Cluj&amp;aq=0&amp;oq=strada+mete&amp;sll=46.777248,23.59989&amp;sspn=0.289198,0.837021&amp;gl=ro&amp;ie=UTF8&amp;hq=&amp;hnear=Strada+Meteor,+Cluj-Napoca,+Cluj&amp;t=m&amp;z=14&amp;ll=46.754357,23.590124&amp;" target="_blank">Link Google Maps</a>
+        <h4><?php echo $txt["company_name"]?></h4>
+        <?php echo $txt["what_we_do"]?>
 		  </div>
 	  </div>
 		<div class="container">
@@ -114,7 +111,7 @@
       $fromValue = "From: <$email>\r\nReturn-path: $email";
       $subjectValue = "Message sent using your contact form: " . $subject;
       mail("ilixandr@gmail.com", $subjectValue, $message, $fromValue);
-	  echo "Email sent!";
+	  echo $txt["email_sent"];
 	}
   }
   ?>

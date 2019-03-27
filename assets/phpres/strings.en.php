@@ -67,4 +67,18 @@ $txt["blog_cat_name"] = "Articles in cathegory ";
 $txt["blog_cat_title"] = "Article cathegories on iwannawe.ro's blog";
 $txt["blog_cat_keywords"] = "iwannaweb.ro, blog, cathegories";
 $txt["blog_cat_description"] = "Blog www.iwannaweb.ro. Articles' cathegories are Other, Software, Hardware, Security and Programming. ";
+$txt["contact_contact_us"] = "Contact us";
+$txt["contact_we_will_reply"] = "Contact us, we will be contacting you back as soon as possible.";
+$txt["contact_legend_text"] = "Send us a message...";
+$txt["contact_email"] = "E-mail address";
+$txt["subject"] = "Subject";
+$txt["contact_subject_placeholder"] = "Short description for your message";
+$txt["message"] = "Message";
+$txt["send"] = "Send";
+$txt["reset"] = "Reset";
+$txt["how_to_get_in_touch"] = "How to get in touch:";
+$txt["get_in_touch_text"] = 'For support and other questions, you can contact us directly on email, at <a href="mailto:contact@iwannaweb.ro">contact@iwannaweb.ro</a>';
+$txt["company_name"] = "iwannaweb.ro Romania";
+$txt["what_we_do"] = "We build websites and web applications. We offer free open-source solutions, for which we can provide support. We can also build closed-source solutions, at request.";
+$txt["email_sent"] = "E-mail sent! We will be getting back with a reply as soon as possible. Thank you!";
 ?>

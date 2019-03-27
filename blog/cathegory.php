@@ -6,11 +6,9 @@
   require_once(dirname(dirname(__FILE__)) . '/assets/phpres/blog.functions.php');
   $cat = isset($_GET["cat"]) ? ($_GET["cat"] == "other" || $_GET["cat"] == "software" || $_GET["cat"] == "hardware" || $_GET["cat"] == "security" || $_GET["cat"] == "programming" ? $_GET["cat"] : "other") : "other";
   $language = isset($_GET["lang"]) ? ($_GET["lang"] == "en" ? "en" : ($_GET["lang"] == "fr" ? "fr" : "ro")) : "ro";
-  $posts = getPostsByCathegory($conn, $cat); /* make sure this is not sql-injectable */
+  $posts = getPostsByCathegoryAndLanguage($conn, $cat, $language); /* make sure this is not sql-injectable */
   require_once(dirname(dirname(__FILE__)) . '/assets/phpres/strings.' . $language . '.php');
   require_once(dirname(dirname(__FILE__)) . '/assets/phpres/elements.php');
-
-  $pagename = basename(__FILE__, ".php");
   $pagetitle = $txt["blog_cat_title"];
   $pagekeywords = $txt["blog_cat_title"];
   $pagedescription = $txt["blog_cat_title"];

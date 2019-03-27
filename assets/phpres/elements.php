@@ -5,7 +5,7 @@ function addFooterHtml($language, $pagename) {
   <div class="container">
     <div class="row">
       <div class="col-sm-3">
-        <h2 class="logo"><a href="http://www.iwannaweb.ro"><img src="', $pagename == "crypto" | $pagename == "blog" ? "../" : "", 'assets/img/logo.png" alt=""/></a></h2>
+        <h2 class="logo"><a href="http://localhost/iwannaweb.ro"><img src="', $pagename == "crypto" | $pagename == "blog" ? "../" : "", 'assets/img/logo.png" alt=""/></a></h2>
       </div>
       <div class="col-sm-2">
         <h5>', $txt["f_webdev_small"], '</h5>
@@ -26,7 +26,7 @@ function addFooterHtml($language, $pagename) {
       <div class="col-sm-2">
         <h5>', $txt["f_social"], '</h5>
         <ul>
-          <li><a href="http://www.iwannaweb.ro/blog/"><i class="fas fa-pen-square special"></i> ', $txt["f_blog_small"], '</a></li>
+          <li><a href="http://localhost/iwannaweb.ro/blog/"><i class="fas fa-pen-square special"></i> ', $txt["f_blog_small"], '</a></li>
           <li><a href="#"><i class="fa fa-bullhorn special"></i> ', $txt["f_recomm"], '</a></li>
           <li><a href="#"><i class="fa fa-paper-plane special"></i> ', $txt["f_telegram"], '</a></li>
         </ul>
@@ -37,12 +37,12 @@ function addFooterHtml($language, $pagename) {
           <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
           <a href="#" class="google"><i class="fab fa-github"></i></a>
         </div>
-        <a href="http://www.iwannaweb.ro/contact.asp" class="btn btn-default">', $txt["f_contact_us"], '</a>
+        <a href="http://localhost/iwannaweb.ro/contact.php" class="btn btn-default">', $txt["f_contact_us"], '</a>
       </div>
     </div>
   </div>
   <div class="footer-copyright">
-    <p>© 2013-', date("Y"), ' <a href="http://www.iwannaweb.ro">iwannaweb</a> | ', $txt["f_slogan"], ' </p>
+    <p>© 2013-', date("Y"), ' <a href="http://localhost/iwannaweb.ro">iwannaweb</a> | ', $txt["f_slogan"], ' </p>
   </div>
 </footer>';
 }
@@ -128,7 +128,7 @@ function addMenuHtml($language, $pagename) {
     <div id="sticky-header">
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li', $indexIsActive,'><a href="http://www.iwannaweb.ro">', $txt["home"], '</a></li>
+          <li', $indexIsActive,'><a href="http://localhost/iwannaweb.ro">', $txt["home"], '</a></li>
           <li class="dropdown ', $webdevIsActive,'">
             <a class="dropdown-toggle" data-toggle="dropdown" href="">', $txt["webdev"],'<span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -138,7 +138,7 @@ function addMenuHtml($language, $pagename) {
             </ul>
           </li>
           <li class="dropdown ', $portfolioIsActive,'">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="http://www.iwannaweb.ro/portofoliu_page3.html">', $txt["portfolio"], '<span class="caret"></span></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="http://localhost/iwannaweb.ro/portofoliu_page3.html">', $txt["portfolio"], '<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="http://localhost/iwannaweb.ro/portfolio.php', $language == "ro" ? "" : ($language == "en" ? "?lang=en" : "?lang=fr"), '">', $txt["recent"], '</a></li>
               <li><a href="#', $language == "ro" ? "" : ($language == "en" ? "?lang=en" : "?lang=fr"), '">', $txt["archive"], '</a></li>

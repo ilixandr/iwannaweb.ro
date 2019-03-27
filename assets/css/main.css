@@ -137,6 +137,30 @@ li.activ {
 	padding: 2px 0 2px 0;
 	border-top: 1px dotted black;
 }
+.fldset-style {
+	border: 2px groove #000 !important;
+	padding: 0 1em 1em 1em !important;
+	margin: 0;
+	box-shadow: 0px #000;
+}
+.lgnd-style {
+	font-size: 1.5em !important;
+	font-weight: 500 !important;
+	text-align: left !important;
+	width: auto;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #000;
+}
+.input-group-addon {
+	text-align: left;
+}
+.btn-grp-right {
+	display: flex;
+	justify-content: flex-end;
+}
+.separator-space {
+	width: .5em;
+}
 
 #iwwFooter {
     /*background-color: #3c3d41;*/

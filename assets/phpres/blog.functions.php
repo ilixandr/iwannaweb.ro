@@ -22,9 +22,9 @@ function getSinglePost($id) {
 	$result = mysqli_query($conn, $sql);
 	return mysqli_fetch_assoc($result);
 }
-function getPostsByCathegory($conn, $cat) {
+function getPostsByCathegoryAndLanguage($conn, $cat, $language) {
 	global $conn;
-	$sql = "SELECT * FROM posts WHERE cathegory='" . $cat . "' AND published=true";
+	$sql = "SELECT * FROM posts WHERE language='" . $language . "' AND cathegory='" . $cat . "' AND published=true";
 	$result = mysqli_query($conn, $sql);
 	// fetch all posts as an associative array called $posts
 	$posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
