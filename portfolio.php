@@ -1,6 +1,6 @@
 <?php
 /*======================================
-  == ionut @ 07-Mar-2019              ==
+  == ionut @ 29-Mar-2019              ==
   ======================================*/
   global $language;
   $language = isset($_GET["lang"]) ? ($_GET["lang"] == "en" ? "en" : ($_GET["lang"] == "fr" ? "fr" : "ro")) : "ro";
@@ -13,72 +13,93 @@
 ?>
 <!DOCTYPE html>
 <html lang=<?php echo "\"" . $language . "\""?>>
-  <?php addHeadHtml($language, $pagetitle, $pagekeywords, $pagedescription)?>
-  <body>
-    <?php addMenuHtml($language, "portfolio")?>
-    <div id="iwwmain">
-    		<h2>Portofoliu :: <em>site-uri <a href="http://www.iwannaweb.ro">iwanna.web | Cluj web designer</a></em></h2>
-            <p><em>Serviciile noastre sunt: creare site, optimizare site, promovare site (principal site Cluj, dar oferta e valabilă şi pentru judeţele vecine). Web design-ul necesită 
-			lucru încontinuu, pentru a putea ţine pasul cu publicitatea agresivă promovată de giganţii comerciali ai momentului.</em></p>   
-            
-            <div class="cleaner h30"></div>
-          	<div id="gallery">
-                <div class="gallery_box">
-                	<a class="pirobox" href="images/gallery/webdesign_SEO_1.png" title="http://www.iwannaweb.ro">
-                        <span class="image_frame_900"><span></span>
-                            <img src="images/gallery/webdesign_SEO_1.png" alt="Cluj web designer, creare, optimizare site Cluj" />
-                        </span>
-                    </a>
-					<a href="http://www.iwannaweb.ro">Creare site web</a>
-                    <div class="cleaner"></div>
-                </div>                
-            </div>
-            <div class="cleaner"></div>
-            <div class="pagging">
-								<ul>
-									<li><a href="http://www.iwannaweb.ro/portofoliu.html" target="_parent">&lt;&lt;&lt;</a></li>
-									<li><a href="http://www.iwannaweb.ro/portofoliu.html" target="_parent">1</a></li>
-									<li><a href="http://www.iwannaweb.ro/portofoliu_page2.html" target="_parent">2</a></li>
-									<li><a href="http://www.iwannaweb.ro/portofoliu_page3.html" target="_parent">3</a></li>
-									<li><a href="http://www.iwannaweb.ro/portofoliu_page4.html" target="_parent">4</a></li>
-									<li><a href="http://www.iwannaweb.ro/portofoliu_page4.html" target="_parent">&gt;&gt;&gt;</a></li>
-								</ul>
-								<div class="cleaner"></div>
+<?php addHeadHtml($language, $pagetitle, $pagekeywords, $pagedescription)?>
+<body>
+  <?php addMenuHtml($language, "portfolio")?>
+  <div class="container">
+		<div class="port-top">
+		  <div class="col-xs-8 col-md-8">
+		    <div class="port-text">
+		      <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		      <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
 			</div>
-			<!-- social networking goes here !-->
-			<div class="col_allw300">
-				<a href="http://www.facebook.com/iwannaweb"><img src="images/fb_32_32.png" alt="Cluj web designer" style="vertical-align:middle"/></a>
-				<a href="http://www.iwannaweb.ro" target="_parent"><b>Cluj web designer</b></a> pe 
-				<a href="http://www.facebook.com/iwannaweb">Facebook</a>
+			<div class="col-xs-4 col-md-4">
+			  <img class="img-responsive" src="assets/img/portfolio.jpg" alt="alt">
 			</div>
-			<div class="col_allw300">
-				<a href="http://www.twitter.com/iwannaweb"><img src="images/tw_32_32.png" alt="Cluj web designer" style="vertical-align:middle"/></a>
-				<a href="http://www.iwannaweb.ro" target="_parent"><b>Cluj web designer</b></a> pe 
-				<a href="http://www.twitter.com/iwannaweb">Twitter</a>
-			</div>
-			<div class="col_allw300 col_rm">
-				<a href="//plus.google.com/106919341084706153999?prsrc=3" rel="publisher" target="_top" style="text-decoration:none;vertical-align:middle">
-				<img src="//ssl.gstatic.com/images/icons/gplus-16.png" alt="cluj web designer Google+" style="border:0;width:16px;height:16px;"/>
-				</a>
-				<a href="https://plus.google.com/106919341084706153999" rel="publisher"></a>
-				<a href="http://www.iwannaweb.ro" target="_parent"><b>Cluj web designer</b></a> pe 
-				<a href="https://plus.google.com/106919341084706153999">Google+</a>
-			</div>
-			<div class="col_allw300">			
-				<div id="fb-root"></div>
-				<script>(function(d, s, id) {
-			  		var js, fjs = d.getElementsByTagName(s)[0];
-			  		if (d.getElementById(id)) return;
-			  		js = d.createElement(s); js.id = id;
-			  		js.src = "//connect.facebook.net/ro_RO/all.js#xfbml=1";
-			  		fjs.parentNode.insertBefore(js, fjs);
-				}(document, 'script', 'facebook-jssdk'));
-				</script>
-				<div style="margin-left: 10px;" class="fb-like" data-href="https://www.facebook.com/pages/Iwanna-web/192732267566140" data-width="200" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
-			</div>
-        <div class="cleaner"></div>
     </div>
-</div>
-  <?php addFooterHtml($language, "portfolio")?>
+	</div>
+	<div class="container">
+    <h1 class="text-center">What we do</h1>
+		<div class="what-we-do">
+			<div class="port-spec">
+				<?php drawCircle(300, 85, 149, 20, "#4484CE")?>
+				<h3>Website-uri dinamice</h3>
+      </div>
+			<div class="port-spec">
+				<?php drawCircle(300, 75, 149, 20, "#4484CE")?>
+				<h3>Aplicatii web</h3>
+      </div>
+			<div class="port-spec">
+				<?php drawCircle(300, 95, 149, 20, "#4484CE")?>
+				<h3>Website-uri de prezentare</h3>
+      </div>
+    </div>
+	</div>
+  <div class="container">
+    <h1 class="text-center">Some of our projects</h1>
+    <section id="photos">
+      <?php createPortfolioGallery(dirname(__FILE__) . '/assets/phpres/portfolio.config.json', 'http://localhost/iwannaweb.ro/assets/img/portfolio/')?>
+    </section>
+  </div>
+  <div class="cleaner h50"></div>
+	<div class="container">
+    <div class="col-sm-4">
+      <a href="http://www.facebook.com/iwannaweb"><img src="assets/img/fb_32_32.png" alt="Cluj web designer" style="vertical-align:middle"/></a>
+      <a href="http://www.iwannaweb.ro" target="_parent"><b>Cluj web designer</b></a> pe 
+      <a href="http://www.facebook.com/iwannaweb">Facebook</a>
+    </div>
+    <div class="col-sm-4">
+      <a href="http://www.twitter.com/iwannaweb"><img src="assets/img/tw_32_32.png" alt="Cluj web designer" style="vertical-align:middle"/></a>
+      <a href="http://www.iwannaweb.ro" target="_parent"><b>Cluj web designer</b></a> pe 
+      <a href="http://www.twitter.com/iwannaweb">Twitter</a>
+    </div>
+    <div class="col-sm-4">
+      <a href="//plus.google.com/106919341084706153999?prsrc=3" rel="publisher" target="_top" style="text-decoration:none;vertical-align:middle">
+        <img src="//ssl.gstatic.com/images/icons/gplus-16.png" alt="cluj web designer Google+" style="border:0;width:16px;height:16px;"/>
+      </a>
+      <a href="https://plus.google.com/106919341084706153999" rel="publisher"></a>
+      <a href="http://www.iwannaweb.ro" target="_parent"><b>Cluj web designer</b></a> pe 
+      <a href="https://plus.google.com/106919341084706153999">Google+</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="col-sm-4">
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ro_RO/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+      </script>
+      <div style="margin-left: 10px;" class="fb-like" data-href="https://www.facebook.com/pages/Iwanna-web/192732267566140" data-width="200" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+    </div>
+  </div>
+  <div class="cleaner h10"></div>
+	<?php addFooterHtml($language, "portfolio")?>
+  <script type="text/javascript">
+    (() => {
+      let po = document.createElement("script"); 
+      po.type = "text/javascript"; 
+      po.async = true;
+      po.src = "https://apis.google.com/js/plusone.js?publisherid=106919341084706153999";
+      let s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(po, s);
+    })();
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

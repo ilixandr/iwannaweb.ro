@@ -23,7 +23,7 @@ function drawCircles($box, $percentage, $radius, $margin, $color) {
 <head>
   <title>Test circles</title>
   <style>
-    svg {display: flex; align-items:center;}
+    
     .big {font: italic 80px sans-serif}
     svg:hover text {fill: #F9CF00}
     svg:hover .flashy {fill: #F9CF00}

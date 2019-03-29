@@ -175,4 +175,52 @@ function addHeadHtml($language, $title, $keywords, $description) {
   <link rel="stylesheet" href="http://localhost/iwannaweb.ro/assets/css/main.css" type="text/css">
 </head>';
 }
+function drawCircle($box, $percentage, $radius, $margin, $color) {
+  /*===================================================*\
+  = drawCircle(box, percentage, radius, margin, color)  =
+  = ionut @ 29-mar-2019                                 =
+  =-----------------------------------------------------=
+  = $box is indicating the box size, box is a square    =
+  = $percentage is the percentage the circle displays   =
+  = $radius is the external radius of the circle        =
+  = $margin is the circle's thickness                   =
+  = $color is circle's base color                       =
+  =-----------------------------------------------------=
+  = depends on custom css (add this to your css file)   =
+  = .svg-text-big {font: italic 80px sans-serif}        =
+  =   + (if you change 80px, adapt text's x and y)      =
+  = svg:hover text {fill: #F9CF00}                      =
+  = svg:hover .flashy {fill: #F9CF00}                   =
+  \*===================================================*/
+  /* Calculate x and y */
+  $x = floor(-$radius * cos(deg2rad(90 + 3.6 * $percentage)));
+  $y = floor(-$radius * sin(deg2rad(90 + 3.6 * $percentage)));
+  echo '<svg width="' . $box . '" height="' . $box . '" viewBox="0 0 ' . $box . ' ' . $box . '">
+<g transform="translate(' . ($radius + 1) . ', ' . ($radius + 1) . ')" stroke="#eeeff3" stroke-width="1">
+  <path class="flashy" d="M0 0 0-' . $radius . 'A' . $radius . ' ' . $radius . ' 0 ' . ($percentage > 49 ? 1 : 0) . ' 1' . ($x < 0 ? '' : ' ') . $x . ($y < 0 ? '' : ' ') . $y . 'Z" fill="' . $color . '"/>
+  <path d="M0 0' . ($x < 0 ? '' : ' ') . $x . ($y < 0 ? '' : ' ') . $y . 'A' . $radius . ' ' . $radius . ' 0 ' . ($percentage > 49 ? 0 : 1) . ' 1 0-' . $radius . 'Z" fill="#eeeff3"/>
+</g>
+<g transform="translate(' . ($radius + 1) . ', ' . ($radius + 1) . ')" stroke="#eeeff3" stroke-width="1">
+  <path d="M0 0 0-' . ($radius - $margin) . 'A' . ($radius - $margin) . ' ' . ($radius - $margin) . ' 0 1 1-' . ($radius - $margin) . ' 0Z" fill="#eeeff3"/>
+  <path d="M0 0-' . ($radius - $margin) . ' 0A' . ($radius - $margin) . ' ' . ($radius - $margin) . ' 0 0 1 0-' . ($radius - $margin) . 'Z" fill="#eeeff3"/>
+</g>
+<g class="flashy-g" transform="translate(' . ($radius + 1) . ', ' . ($radius + 1) . ')" stroke="#eeeff3" stroke-width="1">
+  <path d="M0 0 0-' . ($radius - $margin / 2) . 'A' . ($radius - $margin / 2) . ' ' . ($radius - $margin /2) . ' 0 1 1-' . ($radius - $margin / 2) . ' 0Z" fill="#eeeff3"/>
+  <path d="M0 0-' . ($radius - $margin / 2) . ' 0A' . ($radius - $margin / 2) . ' ' . ($radius - $margin / 2) . ' 0 0 1 0-' . ($radius - $margin / 2) . 'Z" fill="#eeeff3"/>
+</g>
+<g transform="translate(' . ($radius + 1) . ', ' . ($radius + 1) . ')">
+  <text class="svg-text-big" x="' . '-90' . '" y="' . 37 . '" fill="' . $color . '">' . $percentage . '%</text>
+</g>
+</svg>';
+}
+function createPortfolioGallery($filePath, $imgPath) {
+  $jsonString = file_get_contents($filePath);
+  $json = json_decode($jsonString, TRUE);
+  for ($i = 1; $i <= count($json); $i++) {
+    echo '<a href="' . $json[$i]["href"] . '" title="' . $json[$i]["title"] . '" target="_blank">
+        <img class="photo-anchor" src="' . $imgPath . $json[$i]["src"] . '" alt="">
+      </a>';
+  }
+  
+}
 ?>
