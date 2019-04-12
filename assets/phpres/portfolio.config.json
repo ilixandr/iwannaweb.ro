@@ -10,23 +10,28 @@
         "title" : "Tema forumdepresie.ro"
     },
     "3" : {
-        "href" : "https://www.iwannaweb.ro",
-        "src" : "3.jpg",
-        "title" : "Website iwannaweb.ro"
+        "href" : "https://www.iwannaweb.ro/projects/random-quotes-machine",
+        "src" : "random-quotes-machine.jpg",
+        "title" : "A random quotes machine (React.js)"
     },
     "4" : {
-        "href" : "https://www.forumdepresie.ro",
-        "src" : "forumdepresie.jpg",
-        "title" : "Tema forumdepresie.ro"
+        "href" : "https://www.iwannaweb.ro/projects/markdown-previewer",
+        "src" : "markdown-previewer.jpg",
+        "title" : "A markdown editor and previewer (React.js)"
     },
     "5" : {
-        "href" : "https://www.iwannaweb.ro",
-        "src" : "iwannaweb.jpg",
-        "title" : "Website iwannaweb.ro"
+        "href" : "https://www.iwannaweb.ro/projects/drum-machine",
+        "src" : "drum-machine.jpg",
+        "title" : "A drum machine mock-up (React.js)"
     },
     "6" : {
-        "href" : "https://www.forumdepresie.ro",
-        "src" : "3.jpg",
-        "title" : "Tema forumdepresie.ro"
+        "href" : "https://www.iwannaweb.ro/projects/javascript-calculator",
+        "src" : "javascript-calculator.jpg",
+        "title" : "Simple JavaScript calculator (React.js)"
+    },
+    "7" : {
+        "href" : "https://www.iwannaweb.ro/projects/pomodoro-clock",
+        "src" : "pomodoro-clock.jpg",
+        "title" : "Pomodoro clock implementation (React.js)"
     }
 }
