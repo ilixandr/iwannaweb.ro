@@ -20,8 +20,8 @@
 		<div class="port-top">
 		  <div class="col-xs-8 col-md-8">
 		    <div class="port-text">
-		      <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		      <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		      <p class="text-justify"><?php echo $txt["portfolio_p1"]?></p>
+		      <p class="text-justify"><?php echo $txt["portfolio_p2"]?></p>
 				</div>
 			</div>
 			<div class="col-xs-4 col-md-4">
@@ -30,26 +30,26 @@
     </div>
 	</div>
 	<div class="container">
-    <h1 class="text-center">What we do</h1>
+    <h1 class="text-center"><?php echo $txt["portfolio_what_we_do"]?></h1>
 		<div class="what-we-do">
 			<div class="port-spec">
 				<?php drawCircle(300, 85, 149, 20, "#4484CE")?>
-				<h3>Website-uri dinamice</h3>
+				<h3><?php echo $txt["portfolio_dynamic_websites"]?></h3>
       </div>
 			<div class="port-spec">
 				<?php drawCircle(300, 75, 149, 20, "#4484CE")?>
-				<h3>Aplicatii web</h3>
+				<h3><?php echo $txt["portfolio_web_apps"]?></h3>
       </div>
 			<div class="port-spec">
 				<?php drawCircle(300, 95, 149, 20, "#4484CE")?>
-				<h3>Website-uri de prezentare</h3>
+				<h3><?php echo $txt["portfolio_pres_web"]?></h3>
       </div>
     </div>
 	</div>
   <div class="container">
-    <h1 class="text-center">Some of our projects</h1>
+    <h1 class="text-center"><?php echo $txt["portfolio_our_projects"]?></h1>
     <section id="photos">
-      <?php createPortfolioGallery(dirname(__FILE__) . '/assets/phpres/portfolio.config.json', 'http://localhost/iwannaweb.ro/assets/img/portfolio/')?>
+      <?php createPortfolioGallery(dirname(__FILE__) . '/assets/phpres/portfolio.config.json', 'http://localhost/iwannaweb.ro/assets/img/portfolio/', $language)?>
     </section>
   </div>
   <div class="cleaner h50"></div>

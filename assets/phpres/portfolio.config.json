@@ -2,51 +2,121 @@
     "1" : {
         "href" : "https://www.iwannaweb.ro",
         "src" : "iwannaweb.jpg",
-        "title" : "Website iwannaweb.ro"
+        "title_en" : "Website iwannaweb.ro",
+        "title_ro" : "Site-ul iwannaweb.ro",
+        "title_fr" : "Le site web iwannaweb.ro",
+        "alt_en" : "website iwannaweb.ro",
+        "alt_ro" : "site-ul iwannaweb.ro",
+        "alt_fr" : "site web iwannaweb.ro"
     },
     "2" : {
         "href" : "https://www.forumdepresie.ro",
         "src" : "forumdepresie.jpg",
-        "title" : "Tema forumdepresie.ro"
+        "title_en" : "Theme for www.forumdepresie.ro",
+        "title_ro" : "Tema petru www.forumdepresie.ro",
+        "title_fr" : "La thème pour le site www.forumdepresie.ro",
+        "alt_en" : "theme for www.forumdepresie.ro",
+        "alt_ro" : "tema pentru www.forumdepresie.ro",
+        "alt_fr" : "thème pour www.forumdepresie.ro"
     },
     "3" : {
         "href" : "https://www.iwannaweb.ro/projects/random-quotes-machine",
         "src" : "random-quotes-machine.jpg",
-        "title" : "A random quotes machine (React.js)"
+        "title_en" : "A random quotes machine (React.js)",
+        "title_ro" : "Tonomat de citate aleatorii (React.js)",
+        "title_fr" : "Machine de citations aléatoires (React.js)",
+        "alt_en" : "random quotes machine",
+        "alt_ro" : "tonomat de citate aleatorii",
+        "alt_fr" : "machine de citations aléatoires"
     },
     "4" : {
         "href" : "https://www.iwannaweb.ro/projects/markdown-previewer",
         "src" : "markdown-previewer.jpg",
-        "title" : "A markdown editor and previewer (React.js)"
+        "title_en" : "A markdown editor and previewer (React.js)",
+        "title_ro" : "Editor si previzualizator pentru limbajul markdown (React.js)",
+        "title_fr" : "Éditeur et prévisualiseur pour le langauage markdown (React.js)",
+        "alt_en" : "markdown editor and previewer",
+        "alt_ro" : "editor si previzualizator pentru markdown",
+        "alt_fr" : "éditeur et prévisualiseur pour markdown"
     },
     "5" : {
         "href" : "https://www.iwannaweb.ro/projects/drum-machine",
         "src" : "drum-machine.jpg",
-        "title" : "A drum machine mock-up (React.js)"
+        "title_en" : "A drum machine mock-up (React.js)",
+        "title_ro" : "Mockup pentru un automat de ritm (React.js)",
+        "title_fr" : "Une maquette de boîte à rythmes (React.js)",
+        "alt_en" : "drum machine",
+        "alt_ro" : "automat de ritm",
+        "alt_fr" : "boîte à rythmes"
     },
     "6" : {
         "href" : "https://www.iwannaweb.ro/projects/javascript-calculator",
         "src" : "javascript-calculator.jpg",
-        "title" : "Simple JavaScript calculator (React.js)"
+        "title_en" : "Simple JavaScript calculator (React.js)",
+        "title_ro" : "Calculator simplu in JavaScript (React.js)",
+        "title_fr" : "Calculatrice simple mise en oeuvre avec l'aide de JavaScript (React.js)",
+        "alt_en" : "simple javascript calculator",
+        "alt_ro" : "calculator simplu javascript",
+        "alt_fr" : "calculatrice simple javascript"
     },
     "7" : {
         "href" : "https://www.iwannaweb.ro/projects/pomodoro-clock",
         "src" : "pomodoro-clock.jpg",
-        "title" : "Pomodoro clock implementation (React.js)"
+        "title_en" : "Pomodoro clock implementation (React.js)",
+        "title_ro" : "Implementare a metodei pomodoro (React.js)",
+        "title_fr" : "Mise en oeuvre de la méthode pomodoro (React.js)",
+        "alt_en" : "pomodoro clock",
+        "alt_ro" : "metoda pomodoro",
+        "alt_fr" : "la méthode pomodoro"
     },
     "8" : {
         "href" : "https://www.iwannaweb.ro/projects/visualize-data-with-a-barchart",
         "src" : "visualize-data-with-a-barchart.jpg",
-        "title" : "A barchart representation of US's NIPA (D3.js)"
+        "title_en" : "A barchart representation of US's NIPA (D3.js)",
+        "title_ro" : "Diagrama cu bare reprezentand indicele NIPA pentru SUA (D3.js)",
+        "title_fr" : "Un diagramme à barres représentant le NIPA américain (D3.js)",
+        "alt_en" : "barchart representation for US NIPA",
+        "alt_ro" : "diagrama cu bare pentru NIPA in SUA",
+        "alt_fr" : "diagramme à barres pour le NIPA américain"
     },
     "9" : {
         "href" : "https://www.iwannaweb.ro/projects/visualize-data-with-a-scatterplot-graph",
         "src" : "visualize-data-with-a-scatterplot-graph.jpg",
-        "title" : "Doping allegations in Tour de France (D3.js)"
+        "title_en" : "Doping allegations in Tour de France (D3.js)",
+        "title_ro" : "Presupusele cazuri de dopaj din Turul Frantei (D3.js)",
+        "title_fr" : "Allégations de dopage sur le Tour de France (D3.js)",
+        "alt_en" : "doping allegations in tour de france",
+        "alt_ro" : "cazuri de dopaj in turul frantei",
+        "alt_fr" : "allégations de dopage sur le tour de france"
     },
     "10" : {
         "href" : "https://www.iwannaweb.ro/projects/visualize-data-with-a-heat-map",
         "src" : "visualize-data-with-a-heat-map.jpg",
-        "title" : "Monthly global land-surface temperature (D3.js)"
+        "title_en" : "Monthly global land-surface temperature (D3.js)",
+        "title_ro" : "Temperatura globala lunara a suprafetei pamantului (D3.js)",
+        "title_fr" : "Température mondiale mensuelle à la surface de la terre (D3.js)",
+        "alt_en" : "monthly global land-surface temperature",
+        "alt_ro" : "temperatura globala lunara a suprafetei pamantului",
+        "alt_fr" : "température mondiale mensuelle à la surface de la terre"
+    },
+    "11" : {
+        "href" : "https://www.iwannaweb.ro/projects/visualize-data-with-a-choropleth-map",
+        "src" : "visualize-data-with-a-choropleth-map.jpg",
+        "title_en" : "U.S. educational attainment (D3.js)",
+        "title_ro" : "Nivelul de educatie din S.U.A. (D3.js)",
+        "title_fr" : "Le niveau d'éducation aux États-Unis (D3.js)",
+        "alt_en" : "U.S. educational attainment",
+        "alt_ro" : "nivelul de educatie in S.U.A.",
+        "alt_fr" : "niveau d'éducation aux États-Unis"
+    },
+    "12" : {
+        "href" : "https://www.iwannaweb.ro/projects/visualize-data-with-a-treemap-diagram",
+        "src" : "visualize-data-with-a-treemap-diagram.jpg",
+        "title_en" : "Movie sales treemap diagram (D3.js)",
+        "title_ro" : "Diagrama treemap a vanzarilor de filme (D3.js)",
+        "title_fr" : "Diagramme de type treemap pour la vente de film (D3.js)",
+        "alt_en" : "movie sales treemap diagram",
+        "alt_ro" : "diagrama treemap a vanzarilor de filme",
+        "alt_fr" : "diagramme de type treemap pour la vente de film"
     }
 }

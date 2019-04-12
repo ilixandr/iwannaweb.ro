@@ -213,12 +213,12 @@ function drawCircle($box, $percentage, $radius, $margin, $color) {
 </g>
 </svg>';
 }
-function createPortfolioGallery($filePath, $imgPath) {
+function createPortfolioGallery($filePath, $imgPath, $lang) {
   $jsonString = file_get_contents($filePath);
   $json = json_decode($jsonString, TRUE);
   for ($i = 1; $i <= count($json); $i++) {
-    echo '<a href="' . $json[$i]["href"] . '" title="' . $json[$i]["title"] . '" target="_blank">
-        <img class="photo-anchor" src="' . $imgPath . $json[$i]["src"] . '" alt="">
+    echo '<a href="' . $json[$i]["href"] . '" title="' . $json[$i]["title_" . $lang] . '" target="_blank">
+        <img class="photo-anchor" src="' . $imgPath . $json[$i]["src"] . '" alt="' . $json[$i]["alt_" . $lang] . '">
       </a>';
   }
   
