@@ -33,5 +33,20 @@
         "href" : "https://www.iwannaweb.ro/projects/pomodoro-clock",
         "src" : "pomodoro-clock.jpg",
         "title" : "Pomodoro clock implementation (React.js)"
+    },
+    "8" : {
+        "href" : "https://www.iwannaweb.ro/projects/visualize-data-with-a-barchart",
+        "src" : "visualize-data-with-a-barchart.jpg",
+        "title" : "A barchart representation of US's NIPA (D3.js)"
+    },
+    "9" : {
+        "href" : "https://www.iwannaweb.ro/projects/visualize-data-with-a-scatterplot-graph",
+        "src" : "visualize-data-with-a-scatterplot-graph.jpg",
+        "title" : "Doping allegations in Tour de France (D3.js)"
+    },
+    "10" : {
+        "href" : "https://www.iwannaweb.ro/projects/visualize-data-with-a-heat-map",
+        "src" : "visualize-data-with-a-heat-map.jpg",
+        "title" : "Monthly global land-surface temperature (D3.js)"
     }
 }
