@@ -78,6 +78,7 @@ $txt["contact_contact_us"] = "Contact us";
 $txt["contact_we_will_reply"] = "Contact us, we will be contacting you back as soon as possible.";
 $txt["contact_legend_text"] = "Send us a message...";
 $txt["contact_email"] = "E-mail address";
+$txt["contact_email_error"] = "Please use a valid email address!";
 $txt["subject"] = "Subject";
 $txt["contact_subject_placeholder"] = "Short description for your message";
 $txt["message"] = "Message";

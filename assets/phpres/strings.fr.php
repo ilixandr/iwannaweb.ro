@@ -78,6 +78,7 @@ $txt["contact_contact_us"] = "Contactez-nous";
 $txt["contact_we_will_reply"] = "Contactez-nous et nous essayerons à vous répondre dès que possible.";
 $txt["contact_legend_text"] = "Nous envoyer un message...";
 $txt["contact_email"] = "Adresse mail";
+$txt["contact_email_error"] = "Utilisez une adresse mail valide, s\'il vous plaît!";
 $txt["subject"] = "Sujet";
 $txt["contact_subject_placeholder"] = "Courte description";
 $txt["message"] = "Message";

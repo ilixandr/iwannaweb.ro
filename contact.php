@@ -33,7 +33,7 @@
 		    <form action="" method="POST" enctype="multipart/form-data">
 			    <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">@</span>
-				    <input type="text" class="form-control" name="E-mail" id="E-mail" placeholder="<?php echo $txt["contact_email"]?>"/>
+				    <input type="email" class="form-control" name="E-mail" id="E-mail" placeholder="<?php echo $txt["contact_email"]?>" oninvalid="this.setCustomValidity('<?php echo $txt['contact_email_error']?>')"/>
           </div>
 			    <div class="cleaner h10"></div>
 			    <div class="input-group">

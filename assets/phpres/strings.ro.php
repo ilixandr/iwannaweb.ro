@@ -78,6 +78,7 @@ $txt["contact_contact_us"] = "Contactează-ne";
 $txt["contact_we_will_reply"] = "Contactează-ne şi vom încerca să revenim cu un răspuns în cel mai scurt timp posibil.";
 $txt["contact_legend_text"] = "Trimite-ne un mesaj...";
 $txt["contact_email"] = "Adresa de e-mail";
+$txt["contact_email_error"] = "Vă rugăm să introduceţi o adresă de email validă!";
 $txt["subject"] = "Subiect";
 $txt["contact_subject_placeholder"] = "O scurtă descriere";
 $txt["message"] = "Mesaj";
