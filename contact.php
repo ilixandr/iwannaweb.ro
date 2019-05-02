@@ -102,10 +102,10 @@
   </div>
   <?php
   } else {
-    $email=$_REQUEST['E-mail'];
-    $subject=$_REQUEST['Subiect'];
-    $message=$_REQUEST['Mesaj'];
-    if (($email == "")||($subject == "")||($message== "" )) {
+    $email = htmlspecialchars($_REQUEST['E-mail']);
+    $subject = htmlspecialchars($_REQUEST['Subiect']);
+    $message = htmlspecialchars($_REQUEST['Mesaj']);
+    if (($email == "") || ($subject == "") || ($message== "" )) {
 	  echo "All fields are required, please fill <a href=\"\">the form</a> again.";  
     } else {
       $fromValue = "From: <$email>\r\nReturn-path: $email";
