@@ -20,6 +20,7 @@
 		<div class="port-top">
 		  <div class="col-xs-8 col-md-8">
 		    <div class="port-text">
+          <p class="text-justify"><i class="fas fa-quote-right fas-iww-small"></i><b><?php echo $txt["portfolio_p0_quote"]?></b><i class="fas fa-quote-left fas-iww-small"></i><b><?php echo $txt["portfolio_p0_author"]?></b></p>
 		      <p class="text-justify"><?php echo $txt["portfolio_p1"]?></p>
 		      <p class="text-justify"><?php echo $txt["portfolio_p2"]?></p>
 				</div>
