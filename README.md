@@ -2,10 +2,12 @@ iwannaweb.ro
 ============
 `https://www.iwannaweb.ro`
 
+---
 1) HOME PAGE (40%)
 
 Presentation page, keeps most of the old presentation page. However, text needs to be rebuilt, from both SEO and professional p.o.v.
 
+---
 2) WEB DEV (0%)
 
 A dropdown, consists of multiple components:
