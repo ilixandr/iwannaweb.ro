@@ -276,6 +276,18 @@ svg:hover g.flashy-g {
 	}
 }
 
+.iframe-div {
+	min-height: 640px;
+	display: flex;
+	justify-content: space-around;
+}
+iframe.pendulum {
+	top:0; 
+	left:0; 
+	width:100%; 
+	height:640px;
+}
+
 #iwwFooter {
     background-color: var(--codepen-black);
     color: var(--pure-white);

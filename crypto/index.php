@@ -17,46 +17,29 @@
 <body>
   <?php addMenuHtml($language, "crypto")?>
     <div class="container">
-      <div class="col-sm-9">
-      	<h1>HelpDesk &amp; asistenţă IT</h1>
-        <div class="image_frame_300 image_fl"><span></span><img src="../assets/img/webdesign_helpdesk.png" alt= "servicii helpdesk, asistententa IT, Cluj web designer" /></div>
-        <p><em>Something about crypto</em></p>
-        <p>În anii '90 se spunea tot mai des că trăim în "secolul vitezei". Şi, într-adevăr, la vremea respectivă, aspectul care devenea hotărâtor în ceea ce avea pretenţia 
-		să se numească economie de piaţă era raportul calitate/ preţ/ viteză de execuţie. Astăzi ne vedem, cu sau fără voia noastră, migraţi spre o societate de tip informaţional, 
-		în care publicitatea a devenit un factor chiar mai important decât calitatea, întrucât dacă nimeni nu ştie ce şi unde vinzi, va trebui să te raportezi la societatea 
-		pur "vitezistă", pe cale de dispariţie. Dacă exişti în mediul virtual, exişti pentru competiţie. Aici intră în scenă web design-ul, crearea de site-uri web, iar 
-		promovarea site-ului vă va aduce pe piaţă, putând profita strategic de plusul de calitate pe care îl oferiţi. Totul devine încet-încet informatizat, iar noi vă putem 
-		oferi asistenţă IT pentru orice tip de problemă, pe lângă crearea unui site web şi optimizarea lui pentru motoarele de căutare.</p>
-        <p>Suntem <a href="http://www.iwannaweb.ro">iwanna.web | Cluj web designer</a>, ne dorim să avem cei mai mulţumiţi clienţi, iar serviciile noastre cuprind:</p><br/>
-		<ul>
-		  <li><strong>creare site web</strong>, promovare site web, <strong>web design</strong>;</li>
-		  <li>optimizare site web pentru motoarele de căutare (<strong>SEO</strong> - Search Engine Optimization);</li>
-		  <li><strong>servicii HelpDesk şi asistenţă IT</strong> pentru orice problemă de tip software / hardware - remote sau la sediul clientului;</li>
-		  <li>servicii de <strong>promovare</strong> a clientului - afişe, postere si promovare în mediul online.</li>
-		</ul>
-		<div class="col-sm-12">
-			<div class="spacer-dash"></div>
-		  	<div class="col-sm-6">
-		  	  <h2>HelpDesk</h2>
-              <p>Pentru clienţii noştri, dar şi pentru oricine altcineva are nevoie, oferim servicii de asistenţă IT (onsite sau remote, hardware şi software). Companiile mari 
-			  dispun de un HelpDesk profesional, gata oricând să rezolve problemele informatice. Acum puteţi avea şi dumneavoastră propriul HelpDesk! E suficient să ne contactaţi!</p>	
-		  	</div>
-		  	<div class="col-sm-6">
-		  	  <h2>Cluj web design</h2>
-              <p><b>Web design</b>, creare de site-uri web, optimizare pentru motoarele de căutare - <b>SEO</b>, promovare în mediul online, publicitate. Tot ceea ce aveţi nevoie 
-			  pentru a putea face faţă competiţiei se află acum la un click distanţă! Mizăm pe o acoperire la 360 de grade, prin complementarea serviciilor de <strong>web design</strong> 
-			  cu cele de tip <strong>helpdesk</strong>.</p>	
-		  	</div>
-		</div>
+      <div class="col-md-4 col-md-offset-4">
+        <h1>Coming soon...</h1>
       </div>
-      <div class="col-sm-3">
-        <h4>10 linkuri utile</h4>
-		<i>Mai jos veţi găsi 10 linkuri utile, care sperăm să ţină loc de asistanţă de bază pentru diferite întrebări şi probleme de IT pe care le-aţi putea avea:</i><br/><br/>
-        <iframe frameborder="0" scrolling="no" height="300px" src="http://www.iwannaweb.ro/blog/utile-links.html"></iframe>
-        <div class="spacer-dash"></div>
-        <h4>Ultimele noutăţi...</h4>
-        <iframe frameborder="0" scrolling="no" height="300px" src="http://www.iwannaweb.ro/blog/noutati-links.html"></iframe>
-      </div>	
+    </div>
+    <div class="container">
+      <div class="iframe-div">
+        <iframe class="pendulum" src="https://player.vimeo.com/video/249400106?autoplay=1&loop=1&title=0&portrait=0&muted=1" frameborder="0"></iframe>
+      </div>
+    </div>
+    <div class="container">
+      <div id="adblock-detection-text"></div>
+      <div class="row">
+        <div class="coinmarketcap-currency-widget col-md-3 col-xs-3" data-currencyid="1" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-stats="USD" data-statsticker="false"></div>
+        <div class="coinmarketcap-currency-widget col-md-3 col-xs-3" data-currencyid="1027" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-stats="USD" data-statsticker="false"></div>
+        <div class="coinmarketcap-currency-widget col-md-3 col-xs-3" data-currencyid="52" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-stats="USD" data-statsticker="false"></div>
+        <div class="coinmarketcap-currency-widget col-md-3 col-xs-3" data-currencyid="1831" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-stats="USD" data-statsticker="false"></div>
+      </div>
+      <div class="row">
+        <div class="coinmarketcap-currency-widget col-md-3 col-xs-3" data-currencyid="2" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-stats="USD" data-statsticker="false"></div>
+        <div class="coinmarketcap-currency-widget col-md-3 col-xs-3" data-currencyid="1765" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-stats="USD" data-statsticker="false"></div>
+        <div class="coinmarketcap-currency-widget col-md-3 col-xs-3" data-currencyid="1839" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-stats="USD" data-statsticker="false"></div>
+        <div class="coinmarketcap-currency-widget col-md-3 col-xs-3" data-currencyid="512" data-base="USD" data-secondary="" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-stats="USD" data-statsticker="false"></div>
+      </div>
     </div>
     <div class="container">
       <div class="col-sm-4">
@@ -94,6 +77,25 @@
     </div>
     <div class="cleaner h20"></div>
     <?php addFooterHtml($language, "crypto")?>
+    <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+    <script type="text/javascript">
+      let adblock = true;
+    </script>
+    <script type="text/javascript" src="../assets/js/adframe.js"></script>
+    <script type="text/javascript">
+      if (adblock) {
+        let text = <?php echo json_encode($txt["adblock-detection-text"])?>;
+        let adt = document.getElementById('adblock-detection-text');
+        adt.style.padding = "10px";
+        adt.style.margin = "10px";
+        adt.style.border = "2px solid black";
+        adt.style.borderRadius = "5px";
+        adt.style.width = "100%";
+        adt.style.height = "100px";
+        adt.display = "flex";
+        adt.innerHTML = text;
+      }
+    </script>
     <script type="text/javascript">
   	  (function() {
         var po = document.createElement("script"); po.type = "text/javascript"; po.async = true;

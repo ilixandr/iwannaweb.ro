@@ -40,6 +40,7 @@ $txt["home"] = "HOME";
 $txt["webdev"] = "WEB DEVELOPMENT";
 $txt["portfolio"] = "PORTFOLIO";
 $txt["crypto"] = "CRYPTOCURRENCY";
+$txt["adblock-detection-text"] = "It looks like you are using an Ad Blocker that is blocking content from coinmarketcap.com. We are using CoinMarketCap's Cryptocurrency Price Ticker Widget to display crypto prices on this page. Please whitelist our website in your Ad Blocket to allow displaying the latest prices. Also, please note that we are not using any ads on our webpage and no ads will be displayed here. Thank you!";
 $txt["blog"] = "BLOG";
 $txt["contact"] = "CONTACT";
 $txt["services"] = "SERVICES";
